@@ -1,0 +1,1217 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1,
+    "workspacePrefix": "/home/brian/work/ctx-core/ctx-core"
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "@ctx-core/auth0-service",
+      "version": "0.0.0",
+      "description": "ctx-core auth0 ui component & express endpoints",
+      "keywords": [
+        "ctx-core",
+        "auth0"
+      ],
+      "homepage": "https://github.com/ctx-core/auth0-ui#readme",
+      "bugs": {
+        "url": "https://github.com/ctx-core/auth0-ui/issues"
+      },
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/ctx-core/auth0-ui.git"
+      },
+      "license": "Apache-2.0",
+      "author": "Brian Takita",
+      "type": "module",
+      "main": "./dist/index.js",
+      "module": "./dist/index.js",
+      "types": "./src/index.ts",
+      "exports": {
+        ".": {
+          "require": "./dist/index.cjs",
+          "import": "./dist/index.js"
+        },
+        "./package.json": "./package.json"
+      },
+      "browser": "./dist/index.browser.js",
+      "scripts": {
+        "build": "npm run generate_ctx_I_file && npm run compile",
+        "clean": "rm -rf dist",
+        "compile": "swc src --out-dir dist --copy-files --source-maps --config-file .swcrc",
+        "exec": "$@",
+        "generate_ctx_I_file": "swc $(./node_modules/.bin/generate_ctx_I_file | tail -n1) --out-dir dist --source-maps --config-file .swcrc",
+        "prepublishOnly": "npm run clean && npm run build"
+      },
+      "dependencies": {
+        "@ctx-core/auth0": "workspace:^25.0.103",
+        "@ctx-core/auth0-management": "workspace:^6.0.101",
+        "@ctx-core/dialog": "workspace:^15.0.78",
+        "@ctx-core/dom": "workspace:^11.0.30",
+        "@ctx-core/error": "workspace:^11.0.18",
+        "@ctx-core/fetch": "workspace:^11.0.80",
+        "@ctx-core/function": "workspace:^20.2.3",
+        "@ctx-core/http": "workspace:^7.0.18",
+        "@ctx-core/jwt": "workspace:^10.0.27",
+        "@ctx-core/logger": "workspace:^9.0.19",
+        "@ctx-core/object": "workspace:^21.0.22",
+        "@ctx-core/store": "workspace:^27.0.36",
+        "auth0-js": "^9.18.0",
+        "jsonwebtoken": "^8.5.1",
+        "polka": "^0.5.2"
+      },
+      "devDependencies": {
+        "@ctx-core/ctx-core-package-tools": "workspace:^8.0.77",
+        "@ctx-core/dev-tools": "workspace:^7.2.0",
+        "@swc/cli": "^0.1.51",
+        "@swc/core": "^1.2.107",
+        "@types/jsonwebtoken": "^8.5.5",
+        "@types/polka": "^0.5.3",
+        "svelte": "3.44.1",
+        "typescript": "^4.4.4"
+      },
+      "publishConfig": {
+        "access": "public",
+        "cache": "~/.npm"
+      }
+    },
+    "prefix": "/home/brian/work/ctx-core/ctx-core/packages/auth0-service"
+  },
+  "2 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "@ctx-core/ctx-core",
+      "version": "2.0.0",
+      "private": true,
+      "description": "ctx-core monorepo",
+      "keywords": [
+        "ctx-core"
+      ],
+      "homepage": "https://github.com/ctx-core/ctx-core",
+      "bugs": {
+        "url": "https://github.com/ctx-core/ctx-core/issues"
+      },
+      "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ctx-core/ctx-core.git"
+      },
+      "license": "Apache-2.0",
+      "author": "Brian Takita",
+      "directories": {
+        "test": "test"
+      },
+      "workspaces": {
+        "packages": [
+          "packages/*",
+          "tools/*"
+        ]
+      },
+      "scripts": {
+        "build": ":",
+        "exec": "$@"
+      },
+      "dependencies": {
+        "@ctx-core/ctx-core": "workspace:2.0.0",
+        "@pnpm/list": "^6.2.10",
+        "@pnpm/sort-packages": "^2.1.3",
+        "esm": "^3.2.25"
+      },
+      "devDependencies": {
+        "@changesets/cli": "^2.18.0",
+        "@ctx-core/build": "workspace:^1.0.0",
+        "@ctx-core/ctx-core-package-tools": "workspace:^8.0.77",
+        "@ctx-core/function": "workspace:^20.2.2",
+        "@ctx-core/git-tools": "workspace:^7.0.16",
+        "@ctx-core/monorepo": "workspace:^18.0.60",
+        "@ctx-core/queue": "workspace:^6.0.14",
+        "pnpm": "^6.21.0",
+        "shelljs": "^0.8.4",
+        "typescript": "^4.4.4"
+      },
+      "preferGlobal": true
+    },
+    "prefix": "/home/brian/work/ctx-core/ctx-core"
+  },
+  "3 debug pnpm:context": {
+    "currentLockfileExists": true,
+    "storeDir": "/home/brian/.pnpm-store/v3",
+    "virtualStoreDir": "/home/brian/work/ctx-core/ctx-core/node_modules/.pnpm"
+  },
+  "4 debug pnpm:stage": {
+    "prefix": "/home/brian/work/ctx-core/ctx-core",
+    "stage": "resolution_started"
+  },
+  "5 debug pnpm:_dependency_resolved": {
+    "resolution": "link:../../tools/ctx-core-package-tools",
+    "wanted": {
+      "dependentId": "packages/auth0-service",
+      "name": "@ctx-core/ctx-core-package-tools",
+      "rawSpec": "workspace:^8.0.77"
+    }
+  },
+  "6 debug pnpm:_dependency_resolved": {
+    "resolution": "link:../dev-tools",
+    "wanted": {
+      "dependentId": "packages/auth0-service",
+      "name": "@ctx-core/dev-tools",
+      "rawSpec": "workspace:^7.2.0"
+    }
+  },
+  "7 debug pnpm:_dependency_resolved": {
+    "resolution": "link:../auth0",
+    "wanted": {
+      "dependentId": "packages/auth0-service",
+      "name": "@ctx-core/auth0",
+      "rawSpec": "workspace:^25.0.103"
+    }
+  },
+  "8 debug pnpm:_dependency_resolved": {
+    "resolution": "link:../auth0-management",
+    "wanted": {
+      "dependentId": "packages/auth0-service",
+      "name": "@ctx-core/auth0-management",
+      "rawSpec": "workspace:^6.0.101"
+    }
+  },
+  "9 debug pnpm:_dependency_resolved": {
+    "resolution": "link:../dialog",
+    "wanted": {
+      "dependentId": "packages/auth0-service",
+      "name": "@ctx-core/dialog",
+      "rawSpec": "workspace:^15.0.78"
+    }
+  },
+  "10 debug pnpm:_dependency_resolved": {
+    "resolution": "link:../dom",
+    "wanted": {
+      "dependentId": "packages/auth0-service",
+      "name": "@ctx-core/dom",
+      "rawSpec": "workspace:^11.0.30"
+    }
+  },
+  "11 debug pnpm:_dependency_resolved": {
+    "resolution": "link:../error",
+    "wanted": {
+      "dependentId": "packages/auth0-service",
+      "name": "@ctx-core/error",
+      "rawSpec": "workspace:^11.0.18"
+    }
+  },
+  "12 debug pnpm:_dependency_resolved": {
+    "resolution": "link:../fetch",
+    "wanted": {
+      "dependentId": "packages/auth0-service",
+      "name": "@ctx-core/fetch",
+      "rawSpec": "workspace:^11.0.80"
+    }
+  },
+  "13 debug pnpm:_dependency_resolved": {
+    "resolution": "link:../function",
+    "wanted": {
+      "dependentId": "packages/auth0-service",
+      "name": "@ctx-core/function",
+      "rawSpec": "workspace:^20.2.3"
+    }
+  },
+  "14 debug pnpm:_dependency_resolved": {
+    "resolution": "link:../http",
+    "wanted": {
+      "dependentId": "packages/auth0-service",
+      "name": "@ctx-core/http",
+      "rawSpec": "workspace:^7.0.18"
+    }
+  },
+  "15 debug pnpm:_dependency_resolved": {
+    "resolution": "link:../jwt",
+    "wanted": {
+      "dependentId": "packages/auth0-service",
+      "name": "@ctx-core/jwt",
+      "rawSpec": "workspace:^10.0.27"
+    }
+  },
+  "16 debug pnpm:_dependency_resolved": {
+    "resolution": "link:../logger",
+    "wanted": {
+      "dependentId": "packages/auth0-service",
+      "name": "@ctx-core/logger",
+      "rawSpec": "workspace:^9.0.19"
+    }
+  },
+  "17 debug pnpm:_dependency_resolved": {
+    "resolution": "link:../object",
+    "wanted": {
+      "dependentId": "packages/auth0-service",
+      "name": "@ctx-core/object",
+      "rawSpec": "workspace:^21.0.22"
+    }
+  },
+  "18 debug pnpm:_dependency_resolved": {
+    "resolution": "link:../store",
+    "wanted": {
+      "dependentId": "packages/auth0-service",
+      "name": "@ctx-core/store",
+      "rawSpec": "workspace:^27.0.36"
+    }
+  },
+  "19 debug pnpm:_dependency_resolved": {
+    "resolution": "link:packages/build",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@ctx-core/build",
+      "rawSpec": "workspace:^1.0.0"
+    }
+  },
+  "20 debug pnpm:_dependency_resolved": {
+    "resolution": "link:tools/ctx-core-package-tools",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@ctx-core/ctx-core-package-tools",
+      "rawSpec": "workspace:^8.0.77"
+    }
+  },
+  "21 debug pnpm:_dependency_resolved": {
+    "resolution": "link:packages/function",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@ctx-core/function",
+      "rawSpec": "workspace:^20.2.2"
+    }
+  },
+  "22 debug pnpm:_dependency_resolved": {
+    "resolution": "link:packages/git-tools",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@ctx-core/git-tools",
+      "rawSpec": "workspace:^7.0.16"
+    }
+  },
+  "23 debug pnpm:_dependency_resolved": {
+    "resolution": "link:packages/monorepo",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@ctx-core/monorepo",
+      "rawSpec": "workspace:^18.0.60"
+    }
+  },
+  "24 debug pnpm:_dependency_resolved": {
+    "resolution": "link:packages/queue",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@ctx-core/queue",
+      "rawSpec": "workspace:^6.0.14"
+    }
+  },
+  "25 debug pnpm:_dependency_resolved": {
+    "resolution": "link:",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@ctx-core/ctx-core",
+      "rawSpec": "workspace:2.0.0"
+    }
+  },
+  "26 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@changesets/cli/2.18.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@changesets/cli",
+      "rawSpec": "^2.18.0"
+    }
+  },
+  "27 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/pnpm/6.21.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "pnpm",
+      "rawSpec": "^6.21.0"
+    }
+  },
+  "28 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/shelljs/0.8.4",
+    "wanted": {
+      "dependentId": ".",
+      "name": "shelljs",
+      "rawSpec": "^0.8.4"
+    }
+  },
+  "29 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/typescript/4.4.4",
+    "wanted": {
+      "dependentId": ".",
+      "name": "typescript",
+      "rawSpec": "^4.4.4"
+    }
+  },
+  "30 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/list/6.2.10",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@pnpm/list",
+      "rawSpec": "^6.2.10"
+    }
+  },
+  "31 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/sort-packages/2.1.3",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@pnpm/sort-packages",
+      "rawSpec": "^2.1.3"
+    }
+  },
+  "32 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/esm/3.2.25",
+    "wanted": {
+      "dependentId": ".",
+      "name": "esm",
+      "rawSpec": "^3.2.25"
+    }
+  },
+  "33 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/svelte/3.44.1",
+    "wanted": {
+      "dependentId": "packages/auth0-service",
+      "name": "svelte",
+      "rawSpec": "3.44.1"
+    }
+  },
+  "34 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/svelte/3.44.1",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "35 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@changesets/cli/2.18.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "36 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@changesets/cli/2.18.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "37 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/pnpm/6.21.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "38 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/pnpm/6.21.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "39 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/typescript/4.4.4",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "40 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/typescript/4.4.4",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "41 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/shelljs/0.8.4",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "42 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/shelljs/0.8.4",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "43 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/list/6.2.10",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "44 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/list/6.2.10",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "45 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/esm/3.2.25",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "46 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/esm/3.2.25",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "47 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/sort-packages/2.1.3",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "48 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/sort-packages/2.1.3",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "49 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/matcher/2.0.0",
+    "wanted": {
+      "dependentId": "/@pnpm/list/6.2.10",
+      "name": "@pnpm/matcher",
+      "rawSpec": "2.0.0"
+    }
+  },
+  "50 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/read-package-json/5.0.6",
+    "wanted": {
+      "dependentId": "/@pnpm/list/6.2.10",
+      "name": "@pnpm/read-package-json",
+      "rawSpec": "5.0.6"
+    }
+  },
+  "51 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/read-project-manifest/2.0.7",
+    "wanted": {
+      "dependentId": "/@pnpm/list/6.2.10",
+      "name": "@pnpm/read-project-manifest",
+      "rawSpec": "2.0.7"
+    }
+  },
+  "52 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/types/7.6.0",
+    "wanted": {
+      "dependentId": "/@pnpm/list/6.2.10",
+      "name": "@pnpm/types",
+      "rawSpec": "7.6.0"
+    }
+  },
+  "53 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@zkochan/npm-package-arg/2.0.1",
+    "wanted": {
+      "dependentId": "/@pnpm/list/6.2.10",
+      "name": "@zkochan/npm-package-arg",
+      "rawSpec": "^2.0.1"
+    }
+  },
+  "54 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/archy/1.0.0",
+    "wanted": {
+      "dependentId": "/@pnpm/list/6.2.10",
+      "name": "archy",
+      "rawSpec": "^1.0.0"
+    }
+  },
+  "55 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/chalk/4.1.2",
+    "wanted": {
+      "dependentId": "/@pnpm/list/6.2.10",
+      "name": "chalk",
+      "rawSpec": "^4.1.0"
+    }
+  },
+  "56 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/cli-columns/4.0.0",
+    "wanted": {
+      "dependentId": "/@pnpm/list/6.2.10",
+      "name": "cli-columns",
+      "rawSpec": "^4.0.0"
+    }
+  },
+  "57 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/dependencies-hierarchy/10.0.13",
+    "wanted": {
+      "dependentId": "/@pnpm/list/6.2.10",
+      "name": "dependencies-hierarchy",
+      "rawSpec": "10.0.13"
+    }
+  },
+  "58 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/p-limit/3.1.0",
+    "wanted": {
+      "dependentId": "/@pnpm/list/6.2.10",
+      "name": "p-limit",
+      "rawSpec": "^3.1.0"
+    }
+  },
+  "59 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/ramda/0.27.1",
+    "wanted": {
+      "dependentId": "/@pnpm/list/6.2.10",
+      "name": "ramda",
+      "rawSpec": "^0.27.1"
+    }
+  },
+  "60 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/semver/7.3.5",
+    "wanted": {
+      "dependentId": "/@pnpm/list/6.2.10",
+      "name": "semver",
+      "rawSpec": "^7.3.4"
+    }
+  },
+  "61 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/svelte/3.44.1",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "62 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/read-package-json/5.0.6",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "63 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/read-package-json/5.0.6",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "64 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/matcher/2.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "65 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/matcher/2.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "66 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/types/7.6.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "67 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/types/7.6.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "68 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@zkochan/npm-package-arg/2.0.1",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "69 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@zkochan/npm-package-arg/2.0.1",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "70 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/read-project-manifest/2.0.7",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "71 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/read-project-manifest/2.0.7",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "72 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/chalk/4.1.2",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "73 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/chalk/4.1.2",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "74 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cli-columns/4.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "75 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cli-columns/4.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "76 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/dependencies-hierarchy/10.0.13",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "77 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/dependencies-hierarchy/10.0.13",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "78 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/p-limit/3.1.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "79 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/p-limit/3.1.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "80 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/archy/1.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "81 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/archy/1.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "82 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/semver/7.3.5",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "83 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/semver/7.3.5",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "84 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ramda/0.27.1",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "85 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ramda/0.27.1",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "86 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/lockfile-file/4.2.1",
+    "wanted": {
+      "dependentId": "/dependencies-hierarchy/10.0.13",
+      "name": "@pnpm/lockfile-file",
+      "rawSpec": "4.2.1"
+    }
+  },
+  "87 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/lockfile-utils/3.1.1",
+    "wanted": {
+      "dependentId": "/dependencies-hierarchy/10.0.13",
+      "name": "@pnpm/lockfile-utils",
+      "rawSpec": "3.1.1"
+    }
+  },
+  "88 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/modules-yaml/9.0.6",
+    "wanted": {
+      "dependentId": "/dependencies-hierarchy/10.0.13",
+      "name": "@pnpm/modules-yaml",
+      "rawSpec": "9.0.6"
+    }
+  },
+  "89 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/normalize-registries/2.0.6",
+    "wanted": {
+      "dependentId": "/dependencies-hierarchy/10.0.13",
+      "name": "@pnpm/normalize-registries",
+      "rawSpec": "2.0.6"
+    }
+  },
+  "90 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/read-modules-dir/3.0.1",
+    "wanted": {
+      "dependentId": "/dependencies-hierarchy/10.0.13",
+      "name": "@pnpm/read-modules-dir",
+      "rawSpec": "3.0.1"
+    }
+  },
+  "91 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/read-package-json/5.0.6",
+    "wanted": {
+      "dependentId": "/dependencies-hierarchy/10.0.13",
+      "name": "@pnpm/read-package-json",
+      "rawSpec": "5.0.6"
+    }
+  },
+  "92 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/types/7.6.0",
+    "wanted": {
+      "dependentId": "/dependencies-hierarchy/10.0.13",
+      "name": "@pnpm/types",
+      "rawSpec": "7.6.0"
+    }
+  },
+  "93 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/dependency-path/8.0.6",
+    "wanted": {
+      "dependentId": "/dependencies-hierarchy/10.0.13",
+      "name": "dependency-path",
+      "rawSpec": "8.0.6"
+    }
+  },
+  "94 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/normalize-path/3.0.0",
+    "wanted": {
+      "dependentId": "/dependencies-hierarchy/10.0.13",
+      "name": "normalize-path",
+      "rawSpec": "^3.0.0"
+    }
+  },
+  "95 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/realpath-missing/1.1.0",
+    "wanted": {
+      "dependentId": "/dependencies-hierarchy/10.0.13",
+      "name": "realpath-missing",
+      "rawSpec": "^1.1.0"
+    }
+  },
+  "96 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/resolve-link-target/2.0.0",
+    "wanted": {
+      "dependentId": "/dependencies-hierarchy/10.0.13",
+      "name": "resolve-link-target",
+      "rawSpec": "^2.0.0"
+    }
+  },
+  "97 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/lockfile-file/4.2.1",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "98 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/lockfile-file/4.2.1",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "99 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/lockfile-utils/3.1.1",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "100 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/lockfile-utils/3.1.1",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "101 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/modules-yaml/9.0.6",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "102 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/modules-yaml/9.0.6",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "103 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/dependency-path/8.0.6",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "104 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/dependency-path/8.0.6",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "105 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/read-modules-dir/3.0.1",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "106 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/read-modules-dir/3.0.1",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "107 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/normalize-registries/2.0.6",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "108 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/normalize-registries/2.0.6",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "109 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/realpath-missing/1.1.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "110 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/realpath-missing/1.1.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "111 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/resolve-link-target/2.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "112 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/resolve-link-target/2.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "113 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/normalize-path/3.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "114 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/normalize-path/3.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "115 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/constants/5.0.0",
+    "wanted": {
+      "dependentId": "/@pnpm/lockfile-file/4.2.1",
+      "name": "@pnpm/constants",
+      "rawSpec": "5.0.0"
+    }
+  },
+  "116 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/error/2.0.0",
+    "wanted": {
+      "dependentId": "/@pnpm/lockfile-file/4.2.1",
+      "name": "@pnpm/error",
+      "rawSpec": "2.0.0"
+    }
+  },
+  "117 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/lockfile-types/3.1.1",
+    "wanted": {
+      "dependentId": "/@pnpm/lockfile-file/4.2.1",
+      "name": "@pnpm/lockfile-types",
+      "rawSpec": "3.1.1"
+    }
+  },
+  "118 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/merge-lockfile-changes/2.0.3",
+    "wanted": {
+      "dependentId": "/@pnpm/lockfile-file/4.2.1",
+      "name": "@pnpm/merge-lockfile-changes",
+      "rawSpec": "2.0.3"
+    }
+  },
+  "119 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/types/7.6.0",
+    "wanted": {
+      "dependentId": "/@pnpm/lockfile-file/4.2.1",
+      "name": "@pnpm/types",
+      "rawSpec": "7.6.0"
+    }
+  },
+  "120 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@zkochan/rimraf/2.1.1",
+    "wanted": {
+      "dependentId": "/@pnpm/lockfile-file/4.2.1",
+      "name": "@zkochan/rimraf",
+      "rawSpec": "^2.1.1"
+    }
+  },
+  "121 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/comver-to-semver/1.0.0",
+    "wanted": {
+      "dependentId": "/@pnpm/lockfile-file/4.2.1",
+      "name": "comver-to-semver",
+      "rawSpec": "^1.0.0"
+    }
+  },
+  "122 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/normalize-path/3.0.0",
+    "wanted": {
+      "dependentId": "/@pnpm/lockfile-file/4.2.1",
+      "name": "normalize-path",
+      "rawSpec": "^3.0.0"
+    }
+  },
+  "123 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/ramda/0.27.1",
+    "wanted": {
+      "dependentId": "/@pnpm/lockfile-file/4.2.1",
+      "name": "ramda",
+      "rawSpec": "^0.27.1"
+    }
+  },
+  "124 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/semver/7.3.5",
+    "wanted": {
+      "dependentId": "/@pnpm/lockfile-file/4.2.1",
+      "name": "semver",
+      "rawSpec": "^7.3.4"
+    }
+  },
+  "125 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/sort-keys/4.2.0",
+    "wanted": {
+      "dependentId": "/@pnpm/lockfile-file/4.2.1",
+      "name": "sort-keys",
+      "rawSpec": "^4.2.0"
+    }
+  },
+  "126 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/strip-bom/4.0.0",
+    "wanted": {
+      "dependentId": "/@pnpm/lockfile-file/4.2.1",
+      "name": "strip-bom",
+      "rawSpec": "^4.0.0"
+    }
+  },
+  "127 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/write-file-atomic/3.0.3",
+    "wanted": {
+      "dependentId": "/@pnpm/lockfile-file/4.2.1",
+      "name": "write-file-atomic",
+      "rawSpec": "^3.0.3"
+    }
+  },
+  "128 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@zkochan/js-yaml/0.0.5",
+    "wanted": {
+      "dependentId": "/@pnpm/lockfile-file/4.2.1",
+      "name": "js-yaml",
+      "rawSpec": "npm:@zkochan/js-yaml@0.0.5"
+    }
+  },
+  "129 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@zkochan/js-yaml/0.0.5",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "130 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/constants/5.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "131 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/constants/5.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "132 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/error/2.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "133 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/error/2.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "134 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/lockfile-types/3.1.1",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "135 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/lockfile-types/3.1.1",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "136 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/merge-lockfile-changes/2.0.3",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "137 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pnpm/merge-lockfile-changes/2.0.3",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "138 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@zkochan/rimraf/2.1.1",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "139 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@zkochan/rimraf/2.1.1",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "140 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/comver-to-semver/1.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "141 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/comver-to-semver/1.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "142 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/sort-keys/4.2.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "143 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/sort-keys/4.2.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "144 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/write-file-atomic/3.0.3",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "145 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/write-file-atomic/3.0.3",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "146 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/strip-bom/4.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "147 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/strip-bom/4.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "148 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/types/7.6.0",
+    "wanted": {
+      "dependentId": "/@pnpm/lockfile-types/3.1.1",
+      "name": "@pnpm/types",
+      "rawSpec": "7.6.0"
+    }
+  },
+  "149 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pnpm/lockfile-types/3.1.1",
+    "wanted": {
+      "dependentId": "/@pnpm/merge-lockfile-changes/2.0.3",
+      "name": "@pnpm/lockfile-types",
+      "rawSpec": "3.1.1"
+    }
+  },
+  "150 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/comver-to-semver/1.0.0",
+    "wanted": {
+      "dependentId": "/@pnpm/merge-lockfile-changes/2.0.3",
+      "name": "comver-to-semver",
+      "rawSpec": "^1.0.0"
+    }
+  },
+  "151 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/ramda/0.27.1",
+    "wanted": {
+      "dependentId": "/@pnpm/merge-lockfile-changes/2.0.3",
+      "name": "ramda",
+      "rawSpec": "^0.27.1"
+    }
+  },
+  "152 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/semver/7.3.5",
+    "wanted": {
+      "dependentId": "/@pnpm/merge-lockfile-changes/2.0.3",
+      "name": "semver",
+      "rawSpec": "^7.3.4"
+    }
+  },
+  "153 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/is-plain-obj/2.1.0",
+    "wanted": {
+      "dependentId": "/sort-keys/4.2.0",
+      "name": "is-plain-obj",
+      "rawSpec": "^2.0.0"
+    }
+  },
+  "154 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/imurmurhash/0.1.4",
+    "wanted": {
+      "dependentId": "/write-file-atomic/3.0.3",
+      "name": "imurmurhash",
+      "rawSpec": "^0.1.4"
+    }
+  },
+  "155 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/is-typedarray/1.0.0",
+    "wanted": {
+      "dependentId": "/write-file-atomic/3.0.3",
+      "name": "is-typedarray",
+      "rawSpec": "^1.0.0"
+    }
+  },
+  "156 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/signal-exit/3.0.5",
+    "wanted": {
+      "dependentId": "/write-file-atomic/3.0.3",
+      "name": "signal-exit",
+      "rawSpec": "^3.0.2"
+    }
+  },
+  "157 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/typedarray-to-buffer/3.1.5",
+    "wanted": {
+      "dependentId": "/write-file-atomic/3.0.3",
+      "name": "typedarray-to-buffer",
+      "rawSpec": "^3.1.5"
+    }
+  },
+  "158 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@zkochan/js-yaml/0.0.5",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "159 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/is-plain-obj/2.1.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "160 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/is-plain-obj/2.1.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "161 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/imurmurhash/0.1.4",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "162 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/imurmurhash/0.1.4",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "163 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/signal-exit/3.0.5",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "164 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/signal-exit/3.0.5",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "165 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/typedarray-to-buffer/3.1.5",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "166 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/typedarray-to-buffer/3.1.5",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "167 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/is-typedarray/1.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "resolved"
+  },
+  "168 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/is-typedarray/1.0.0",
+    "requester": "/home/brian/work/ctx-core/ctx-core",
+    "status": "found_in_store"
+  },
+  "169 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/is-typedarray/1.0.0",
+    "wanted": {
+      "dependentId": "/typedarray-to-buffer/3.1.5",
+      "name": "is-typedarray",
+      "rawSpec": "^1.0.0"
+    }
+  },
+  "170 error pnpm": {
+    "code": "ERR_PNPM_FETCH_404",
+    "hint": "@censible/ui is not in the npm registry, or you have no permission to fetch it.\n\nAn authorization header was used: Bearer 9a26[hidden]",
+    "request": {
+      "authHeaderValue": "Bearer 9a26a7d9-98c5-437d-91cd-41daf8986f4c",
+      "url": "https://registry.npmjs.org/@censible%2Fui"
+    },
+    "response": {
+      "size": 0
+    },
+    "pkgName": "@censible/ui",
+    "pkgsStack": [],
+    "err": {
+      "name": "pnpm",
+      "message": "GET https://registry.npmjs.org/@censible%2Fui: Not Found - 404",
+      "code": "ERR_PNPM_FETCH_404",
+      "stack": "pnpm: GET https://registry.npmjs.org/@censible%2Fui: Not Found - 404\n    at RetryOperation._fn (/home/brian/work/ctx-core/ctx-core/node_modules/.pnpm/pnpm@6.21.0/node_modules/pnpm/dist/pnpm.cjs:84891:18)\n    at processTicksAndRejections (node:internal/process/task_queues:96:5)"
+    }
+  }
+}

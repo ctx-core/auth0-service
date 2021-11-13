@@ -1,0 +1,64 @@
+{
+	"name": "@ctx-core/auth0-service",
+	"version": "1.0.1",
+	"description": "ctx-core auth0 ui component & express endpoints",
+	"keywords": [
+		"ctx-core",
+		"auth0"
+	],
+	"homepage": "https://github.com/ctx-core/auth0-ui#readme",
+	"bugs": {
+		"url": "https://github.com/ctx-core/auth0-ui/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ctx-core/auth0-ui.git"
+	},
+	"license": "Apache-2.0",
+	"author": "Brian Takita",
+	"type": "module",
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"types": "./src/index.ts",
+	"exports": {
+		".": {
+			"require": "./dist/index.cjs",
+			"import": "./dist/index.js"
+		},
+		"./package.json": "./package.json"
+	},
+	"browser": "./dist/index.browser.js",
+	"scripts": {
+		"build": "npm run generate_ctx_I_file && npm run compile",
+		"clean": "rm -rf dist",
+		"compile": "swc src --out-dir dist --copy-files --source-maps --config-file .swcrc",
+		"exec": "$@",
+		"generate_ctx_I_file": "swc $(./node_modules/.bin/generate_ctx_I_file | tail -n1) --out-dir dist --source-maps --config-file .swcrc",
+		"prepublishOnly": "npm run clean && npm run build"
+	},
+	"dependencies": {
+		"@ctx-core/auth0": "workspace:^26.0.0",
+		"@ctx-core/auth0-management": "workspace:^6.0.102",
+		"@ctx-core/error": "workspace:^11.0.18",
+		"@ctx-core/fetch": "workspace:^11.0.80",
+		"@ctx-core/jwt": "workspace:^10.0.28",
+		"@ctx-core/logger": "workspace:^9.0.19",
+		"@ctx-core/object": "workspace:^21.0.22",
+		"auth0-js": "^9.18.0",
+		"jsonwebtoken": "^8.5.1",
+		"polka": "^0.5.2"
+	},
+	"devDependencies": {
+		"@ctx-core/dev-tools": "workspace:^7.2.0",
+		"@swc/cli": "^0.1.51",
+		"@swc/core": "^1.2.107",
+		"@types/jsonwebtoken": "^8.5.5",
+		"@types/polka": "^0.5.3",
+		"svelte": "3.44.1",
+		"typescript": "^4.4.4"
+	},
+	"publishConfig": {
+		"access": "public",
+		"cache": "~/.npm"
+	}
+}
