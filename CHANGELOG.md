@@ -1,5 +1,11 @@
 # @ctx-core/auth0-service
 
+## 1.0.3
+
+### Patch Changes
+
+- version bump
+
 ## 1.0.2
 
 ### Patch Changes
