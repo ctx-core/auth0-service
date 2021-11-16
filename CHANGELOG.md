@@ -1,5 +1,11 @@
 # @ctx-core/auth0-service
 
+## 1.0.4
+
+### Patch Changes
+
+- @types/jsonwebtoken: ^8.5.5 -> ^8.5.6
+
 ## 1.0.3
 
 ### Patch Changes
