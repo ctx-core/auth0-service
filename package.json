@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/auth0-service",
-	"version": "1.0.9",
+	"version": "1.0.10",
 	"description": "ctx-core auth0 ui component & express endpoints",
 	"keywords": [
 		"ctx-core",
@@ -37,21 +37,21 @@
 		"prepublishOnly": "npm run clean && npm run build"
 	},
 	"dependencies": {
-		"@ctx-core/auth0": "workspace:^26.0.6",
-		"@ctx-core/auth0-management": "workspace:^6.0.109",
-		"@ctx-core/error": "workspace:^11.1.4",
-		"@ctx-core/fetch": "workspace:^11.0.86",
-		"@ctx-core/jwt": "workspace:^10.0.33",
-		"@ctx-core/logger": "workspace:^9.0.24",
-		"@ctx-core/object": "workspace:^21.0.27",
+		"@ctx-core/auth0": "workspace:^26.0.7",
+		"@ctx-core/auth0-management": "workspace:^6.0.110",
+		"@ctx-core/error": "workspace:^11.1.5",
+		"@ctx-core/fetch": "workspace:^11.0.87",
+		"@ctx-core/jwt": "workspace:^10.0.34",
+		"@ctx-core/logger": "workspace:^9.0.25",
+		"@ctx-core/object": "workspace:^21.0.28",
 		"auth0-js": "^9.18.0",
 		"jsonwebtoken": "^8.5.1",
 		"polka": "^0.5.2"
 	},
 	"devDependencies": {
-		"@ctx-core/dev-tools": "workspace:^7.2.5",
+		"@ctx-core/dev-tools": "workspace:^7.2.6",
 		"@swc/cli": "^0.1.52",
-		"@swc/core": "^1.2.116",
+		"@swc/core": "^1.2.117",
 		"@types/jsonwebtoken": "^8.5.6",
 		"@types/polka": "^0.5.3",
 		"@types/trouter": "^3.1.0",
