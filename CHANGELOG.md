@@ -1,5 +1,19 @@
 # @ctx-core/auth0-service
 
+## 1.0.12
+
+### Patch Changes
+
+- @swc/core: ^1.2.117 -> ^1.2.118
+- Updated dependencies
+  - @ctx-core/auth0@26.0.9
+  - @ctx-core/auth0-management@6.0.112
+  - @ctx-core/error@11.1.6
+  - @ctx-core/fetch@11.0.88
+  - @ctx-core/jwt@10.0.35
+  - @ctx-core/logger@9.0.26
+  - @ctx-core/object@21.0.29
+
 ## 1.0.11
 
 ### Patch Changes
