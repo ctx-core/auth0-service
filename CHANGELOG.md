@@ -1,5 +1,18 @@
 # @ctx-core/auth0-service
 
+## 1.0.15
+
+### Patch Changes
+
+- package.json: - "main": explicitly not support cjs
+- Updated dependencies
+  - @ctx-core/auth0@26.0.13
+  - @ctx-core/auth0-management@6.0.115
+  - @ctx-core/error@11.1.8
+  - @ctx-core/fetch@11.0.90
+  - @ctx-core/jwt@10.0.37
+  - @ctx-core/logger@9.0.27
+
 ## 1.0.14
 
 ### Patch Changes

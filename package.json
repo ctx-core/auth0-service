@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/auth0-service",
-	"version": "1.0.14",
+	"version": "1.0.15",
 	"description": "ctx-core auth0 ui component & express endpoints",
 	"keywords": [
 		"ctx-core",
@@ -17,7 +17,6 @@
 	"license": "Apache-2.0",
 	"author": "Brian Takita",
 	"type": "module",
-	"main": "./dist/index.js",
 	"module": "./dist/index.js",
 	"types": "./src/index.ts",
 	"exports": {
@@ -37,19 +36,19 @@
 		"prepublishOnly": "npm run clean && npm run build"
 	},
 	"dependencies": {
-		"@ctx-core/auth0": "workspace:^26.0.12",
-		"@ctx-core/auth0-management": "workspace:^6.0.114",
-		"@ctx-core/error": "workspace:^11.1.7",
-		"@ctx-core/fetch": "workspace:^11.0.89",
-		"@ctx-core/jwt": "workspace:^10.0.36",
-		"@ctx-core/logger": "workspace:^9.0.26",
+		"@ctx-core/auth0": "workspace:^26.0.13",
+		"@ctx-core/auth0-management": "workspace:^6.0.115",
+		"@ctx-core/error": "workspace:^11.1.8",
+		"@ctx-core/fetch": "workspace:^11.0.90",
+		"@ctx-core/jwt": "workspace:^10.0.37",
+		"@ctx-core/logger": "workspace:^9.0.27",
 		"@ctx-core/object": "workspace:^21.0.30",
 		"auth0-js": "^9.18.0",
 		"jsonwebtoken": "^8.5.1",
 		"polka": "^0.5.2"
 	},
 	"devDependencies": {
-		"@ctx-core/dev-tools": "workspace:^7.2.8",
+		"@ctx-core/dev-tools": "workspace:^7.2.9",
 		"@swc/cli": "^0.1.52",
 		"@swc/core": "^1.2.118",
 		"@types/jsonwebtoken": "^8.5.6",
