@@ -49,7 +49,7 @@
 		"polka": "^0.5.2"
 	},
 	"devDependencies": {
-		"@ctx-core/dev-tools": "workspace:^7.2.7",
+		"@ctx-core/dev-tools": "workspace:^7.2.8",
 		"@swc/cli": "^0.1.52",
 		"@swc/core": "^1.2.118",
 		"@types/jsonwebtoken": "^8.5.6",
