@@ -3,12 +3,11 @@ import type { ServerResponse } from 'http'
 import type { Request } from 'polka'
 import { user_id_ } from '@ctx-core/auth0'
 import {
-	auth0_management_Ctx, get_auth0_v2_user_b, get_auth0_v2_users_by_email_b, get_auth0_v2_users_by_email_response_T,
-	patch_auth0_v2_user_b
+	get_auth0_v2_user_b, get_auth0_v2_users_by_email_b, get_auth0_v2_users_by_email_response_T, patch_auth0_v2_user_b
 } from '@ctx-core/auth0-management'
 import { header_authorization_jwt_token_ } from '@ctx-core/jwt'
 import { log } from '@ctx-core/logger'
-import type { auth0_service_Ctx } from './auth0_service_Ctx.js'
+import { ctx_ } from '@ctx-core/object'
 import { jwt_token_decoded__b } from './jwt_token_decoded__b.js'
 const logPrefix = '@ctx-core/auth0-service/node/polka_post_auth0_change_password.ts'
 const AUTH0_DOMAIN = process.env.AUTH0_DOMAIN!
@@ -17,7 +16,7 @@ export async function polka_post_auth0_change_password(
 	req:Request&{ body:polka_post_auth0_change_password_body_T }, res:ServerResponse
 ) {
 	log(`${logPrefix}|polka_post_auth0_change_password`)
-	const ctx = {} as polka_post_auth0_change_password_Ctx
+	const ctx = ctx_()
 	const authorization_header = req.headers['authorization']
 	const jwt_token = header_authorization_jwt_token_(authorization_header)
 	if (!jwt_token) {
@@ -65,8 +64,6 @@ export async function polka_post_auth0_change_password(
 	function is_username_password_authentication(user:Auth0UserProfile) {
 		return user.identities[0].connection == 'Username-Password-Authentication'
 	}
-}
-export interface polka_post_auth0_change_password_Ctx extends auth0_management_Ctx, auth0_service_Ctx {
 }
 export interface polka_post_auth0_change_password_body_T {
 	password:string

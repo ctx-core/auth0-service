@@ -1,5 +1,25 @@
 # @ctx-core/auth0-service
 
+## 2.0.0
+
+### Major Changes
+
+- \*\_b: ctx is a map: @ctx-core/object: 22.0.0
+
+### Patch Changes
+
+- package.json: - module
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/object@22.0.0
+  - @ctx-core/auth0@27.0.0
+  - @ctx-core/auth0-management@7.0.0
+  - @ctx-core/error@11.1.9
+  - @ctx-core/jwt@10.0.38
+  - @ctx-core/logger@9.0.32
+  - @ctx-core/fetch@11.0.93
+
 ## 1.0.20
 
 ### Patch Changes

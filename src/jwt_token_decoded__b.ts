@@ -1,10 +1,9 @@
 import jwt, { JwtPayload } from 'jsonwebtoken'
 import type { jwt_token_decoded_I } from '@ctx-core/auth0'
 import { be_, B } from '@ctx-core/object'
-import type { auth0_service_Ctx } from './auth0_service_Ctx.js'
 import { jwks_cert__b } from './jwks_cert__b.js'
 const key = 'jwt_token_decoded_'
-export const jwt_token_decoded__b:B<auth0_service_Ctx, typeof key> = be_(key, ctx=>{
+export const jwt_token_decoded__b:B<jwt_token_decoded__T> = be_(key, ctx=>{
 	const jwks_cert_ = jwks_cert__b(ctx)
 	return jwt_token_decoded_ as jwt_token_decoded__T
 	async function jwt_token_decoded_(jwt_token:string):Promise<JwtPayload|string> {
