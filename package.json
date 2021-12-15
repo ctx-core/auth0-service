@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/auth0-service",
-	"version": "2.0.4",
+	"version": "2.0.5",
 	"description": "ctx-core auth0 ui component & express endpoints",
 	"keywords": [
 		"ctx-core",
@@ -21,25 +21,27 @@
 		".": {
 			"browser": "./dist/index.browser.js",
 			"node": "./dist/index.js",
-			"types": "./src/index.ts"
+			"types": "./dist/index.d.ts"
 		},
 		"./package.json": "./package.json"
 	},
 	"scripts": {
 		"build": "npm run compile",
 		"clean": "rimraf dist",
-		"compile": "swc src --out-dir dist --copy-files --source-maps --config-file .swcrc",
+		"compile": "npm run compile_source && npm run compile_declaration",
+		"compile_source": "swc src --out-dir dist --copy-files --source-maps --config-file .swcrc",
+		"compile_declaration": "tsc src/index.ts --declaration --emitDeclarationOnly --declarationDir dist",
 		"exec": "$@",
 		"prepublishOnly": "npm run clean && npm run build"
 	},
 	"dependencies": {
-		"@ctx-core/auth0": "workspace:^27.0.4",
-		"@ctx-core/auth0-management": "workspace:^7.0.4",
-		"@ctx-core/error": "workspace:^11.1.12",
-		"@ctx-core/fetch": "workspace:^11.0.96",
-		"@ctx-core/jwt": "workspace:^10.0.41",
-		"@ctx-core/logger": "workspace:^9.0.35",
-		"@ctx-core/object": "workspace:^22.0.3",
+		"@ctx-core/auth0": "workspace:^27.0.5",
+		"@ctx-core/auth0-management": "workspace:^7.0.5",
+		"@ctx-core/error": "workspace:^11.1.13",
+		"@ctx-core/fetch": "workspace:^11.0.97",
+		"@ctx-core/jwt": "workspace:^10.0.42",
+		"@ctx-core/logger": "workspace:^9.0.36",
+		"@ctx-core/object": "workspace:^22.0.4",
 		"auth0-js": "^9.18.0",
 		"jsonwebtoken": "^8.5.1",
 		"polka": "^0.5.2"

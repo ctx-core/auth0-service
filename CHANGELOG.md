@@ -1,5 +1,19 @@
 # @ctx-core/auth0-service
 
+## 2.0.5
+
+### Patch Changes
+
+- \*.d.ts export
+- Updated dependencies
+  - @ctx-core/auth0@27.0.5
+  - @ctx-core/auth0-management@7.0.5
+  - @ctx-core/error@11.1.13
+  - @ctx-core/fetch@11.0.97
+  - @ctx-core/jwt@10.0.42
+  - @ctx-core/logger@9.0.36
+  - @ctx-core/object@22.0.4
+
 ## 2.0.4
 
 ### Patch Changes
