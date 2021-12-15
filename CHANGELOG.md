@@ -1,5 +1,19 @@
 # @ctx-core/auth0-service
 
+## 2.0.4
+
+### Patch Changes
+
+- fix: tsconfig.json: "rootDir": "."
+- Updated dependencies
+  - @ctx-core/auth0@27.0.4
+  - @ctx-core/auth0-management@7.0.4
+  - @ctx-core/error@11.1.12
+  - @ctx-core/fetch@11.0.96
+  - @ctx-core/jwt@10.0.41
+  - @ctx-core/logger@9.0.35
+  - @ctx-core/object@22.0.3
+
 ## 2.0.3
 
 ### Patch Changes
