@@ -27,7 +27,7 @@
 	"browser": "./dist/index.browser.js",
 	"scripts": {
 		"build": "npm run compile",
-		"clean": "rm -rf dist",
+		"clean": "rimraf dist",
 		"compile": "swc src --out-dir dist --copy-files --source-maps --config-file .swcrc",
 		"exec": "$@",
 		"prepublishOnly": "npm run clean && npm run build"
@@ -50,6 +50,7 @@
 		"@types/jsonwebtoken": "^8.5.6",
 		"@types/polka": "^0.5.3",
 		"@types/trouter": "^3.1.0",
+		"rimraf": "^3.0.2",
 		"svelte": "^3.44.3",
 		"typescript": "next"
 	},
