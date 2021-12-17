@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/auth0-service",
-	"version": "2.0.6",
+	"version": "2.0.7",
 	"description": "ctx-core auth0 ui component & express endpoints",
 	"keywords": [
 		"ctx-core",
@@ -17,7 +17,7 @@
 	"license": "Apache-2.0",
 	"author": "Brian Takita",
 	"type": "module",
-	"types": "./dist/index.d.ts",
+	"types": "./src/index.ts",
 	"exports": {
 		".": {
 			"browser": "./dist/index.browser.js",
@@ -36,13 +36,13 @@
 		"prepublishOnly": "npm run clean && npm run build"
 	},
 	"dependencies": {
-		"@ctx-core/auth0": "workspace:^27.0.6",
-		"@ctx-core/auth0-management": "workspace:^7.0.6",
-		"@ctx-core/error": "workspace:^11.1.14",
-		"@ctx-core/fetch": "workspace:^11.0.98",
-		"@ctx-core/jwt": "workspace:^10.0.43",
-		"@ctx-core/logger": "workspace:^9.0.37",
-		"@ctx-core/object": "workspace:^22.0.5",
+		"@ctx-core/auth0": "workspace:^27.0.7",
+		"@ctx-core/auth0-management": "workspace:^7.0.7",
+		"@ctx-core/error": "workspace:^11.1.15",
+		"@ctx-core/fetch": "workspace:^11.0.99",
+		"@ctx-core/jwt": "workspace:^10.0.44",
+		"@ctx-core/logger": "workspace:^9.0.38",
+		"@ctx-core/object": "workspace:^22.0.6",
 		"auth0-js": "^9.18.0",
 		"jsonwebtoken": "^8.5.1",
 		"polka": "next"
