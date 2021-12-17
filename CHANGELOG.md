@@ -1,5 +1,19 @@
 # @ctx-core/auth0-service
 
+## 2.0.8
+
+### Patch Changes
+
+- tsconfig.json: "target": "ES2021"
+- Updated dependencies
+  - @ctx-core/auth0@27.0.8
+  - @ctx-core/auth0-management@7.0.8
+  - @ctx-core/error@11.1.16
+  - @ctx-core/fetch@11.0.100
+  - @ctx-core/jwt@10.0.45
+  - @ctx-core/logger@9.0.39
+  - @ctx-core/object@22.0.7
+
 ## 2.0.7
 
 ### Patch Changes
