@@ -1,5 +1,19 @@
 # @ctx-core/auth0-service
 
+## 2.0.9
+
+### Patch Changes
+
+- fix: error TS6059: \* is not under 'rootDir': package.json: types: ./dist/index.d.ts
+- Updated dependencies
+  - @ctx-core/auth0@27.0.9
+  - @ctx-core/auth0-management@7.0.9
+  - @ctx-core/error@11.1.17
+  - @ctx-core/fetch@11.0.101
+  - @ctx-core/jwt@10.0.46
+  - @ctx-core/logger@9.0.40
+  - @ctx-core/object@22.0.8
+
 ## 2.0.8
 
 ### Patch Changes
