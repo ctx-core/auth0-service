@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/auth0-service",
-	"version": "2.0.10",
+	"version": "2.0.12",
 	"description": "ctx-core auth0 ui component & express endpoints",
 	"keywords": [
 		"ctx-core",
@@ -17,48 +17,49 @@
 	"license": "Apache-2.0",
 	"author": "Brian Takita",
 	"type": "module",
-	"types": "./lib/index.d.ts",
+	"types": "./src/index.d.ts",
+	"svelte": "./src/index.js",
 	"exports": {
 		".": {
-			"browser": "./lib/index.browser.js",
-			"node": "./lib/index.js"
+			"browser": "./src/index.browser.js",
+			"node": "./src/index.js"
 		},
 		"./package.json": "./package.json"
 	},
 	"scripts": {
-		"build": "npm run compile",
-		"clean": "rimraf lib && npm run clean:tsbuildinfo",
-		"clean:tsbuildinfo": "rm -f tsconfig.tsbuildinfo && rm -f lib/**/*.d.ts",
-		"compile": "npm run compile:source && npm run compile:declaration",
-		"compile:source": "swc src --out-dir lib --copy-files --source-maps --config-file .swcrc",
-		"compile:declaration": "npm run clean:tsbuildinfo && tsc --declaration --emitDeclarationOnly --declarationDir lib",
+		"build": ":",
+		"clean": ":",
 		"exec": "$@",
-		"prepublishOnly": "npm run clean && npm run build"
+		"prepublishOnly": "npm run clean && npm run build && npm run test",
+		"test": "pnpm test-unit && check-dts",
+		"test-unit": "tsm node_modules/uvu/bin.js . '\\.test\\.(ts|js)$'",
+		"test-unit-coverage": "c8 pnpm test-unit"
 	},
 	"dependencies": {
-		"@ctx-core/auth0": "workspace:^28.0.6",
-		"@ctx-core/auth0-management": "workspace:^7.0.10",
-		"@ctx-core/error": "workspace:^11.1.17",
-		"@ctx-core/fetch": "workspace:^11.0.102",
-		"@ctx-core/jwt": "workspace:^10.0.46",
-		"@ctx-core/logger": "workspace:^9.0.40",
+		"@ctx-core/auth0": "workspace:^28.0.8",
+		"@ctx-core/auth0-management": "workspace:^7.0.11",
+		"@ctx-core/error": "workspace:^11.1.18",
+		"@ctx-core/fetch": "workspace:^11.0.104",
+		"@ctx-core/jwt": "workspace:^10.0.47",
+		"@ctx-core/logger": "workspace:^9.0.41",
 		"@ctx-core/object": "workspace:^22.0.8",
 		"auth0-js": "^9.18.0",
 		"jsonwebtoken": "^8.5.1",
 		"polka": "next"
 	},
 	"devDependencies": {
-		"@swc/cli": "^0.1.55",
-		"@swc/core": "^1.2.124",
 		"@types/jsonwebtoken": "^8.5.6",
 		"@types/trouter": "^3.1.1",
+		"c8": "^7.11.0",
+		"check-dts": "^0.6.6",
 		"rimraf": "^3.0.2",
 		"svelte": "^3.44.3",
-		"typescript": "next"
+		"tsm": "^2.2.1",
+		"typescript": "next",
+		"uvu": "^0.5.2"
 	},
 	"publishConfig": {
 		"access": "public",
 		"cache": "~/.npm"
-	},
-	"svelte": "./lib/index.js"
+	}
 }

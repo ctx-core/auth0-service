@@ -1,10 +1,11 @@
 import { get_jwks_json_b } from '@ctx-core/auth0'
 import { throw_fetch_response } from '@ctx-core/fetch'
-import { be_, B } from '@ctx-core/object'
+import { be_ } from '@ctx-core/object'
 const key = 'jwks_x5c_'
-export const jwks_x5c__b:B<jwks_x5c__T> = be_(key, ctx=>{
+/** @type {import('./jwks_x5c__b.d.ts').jwks_x5c__b} */
+export const jwks_x5c__b = be_(key, ctx=>{
 	const get_jwks_json = get_jwks_json_b(ctx)
-	return jwks_x5c_ as jwks_x5c__T
+	return jwks_x5c_
 	async function jwks_x5c_() {
 		const response = await get_jwks_json()
 		if (!response.ok) {
@@ -17,4 +18,3 @@ export const jwks_x5c__b:B<jwks_x5c__T> = be_(key, ctx=>{
 		return x5c
 	}
 })
-export type jwks_x5c__T = ()=>Promise<string>
