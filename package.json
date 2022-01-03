@@ -36,10 +36,10 @@
 		"test-unit-coverage": "c8 pnpm test-unit"
 	},
 	"dependencies": {
-		"@ctx-core/auth0": "workspace:^28.0.9",
+		"@ctx-core/auth0": "workspace:^28.0.10",
 		"@ctx-core/auth0-management": "workspace:^7.0.12",
 		"@ctx-core/error": "workspace:^11.1.20",
-		"@ctx-core/fetch": "workspace:^11.0.104",
+		"@ctx-core/fetch": "workspace:^11.0.105",
 		"@ctx-core/jwt": "workspace:^10.0.47",
 		"@ctx-core/logger": "workspace:^9.0.41",
 		"@ctx-core/object": "workspace:^22.0.8",
