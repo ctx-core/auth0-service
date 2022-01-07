@@ -1,5 +1,23 @@
 # @ctx-core/auth0-service
 
+## 2.0.16
+
+### Patch Changes
+
+- uvu: ^0.5.2 -> ^0.5.3
+- svelte: ^3.44.3 -> ^3.45.0
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/auth0@28.0.13
+  - @ctx-core/error@11.1.22
+  - @ctx-core/fetch@11.0.108
+  - @ctx-core/object@22.0.11
+  - @ctx-core/auth0-management@7.0.15
+  - @ctx-core/jwt@10.0.49
+  - @ctx-core/logger@9.0.43
+
 ## 2.0.15
 
 ### Patch Changes
