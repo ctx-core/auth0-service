@@ -1,5 +1,15 @@
 # @ctx-core/auth0-service
 
+## 2.0.21
+
+### Patch Changes
+
+- 738370415: @types/jsonwebtoken: ^8.5.6 -> ^8.5.7
+- 738370415: svelte: ^3.45.0 -> ^3.46.1
+- Updated dependencies [738370415]
+  - @ctx-core/auth0@28.0.19
+  - @ctx-core/auth0-management@7.0.20
+
 ## 2.0.20
 
 ### Patch Changes
