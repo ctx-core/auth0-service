@@ -19,18 +19,14 @@ export const polka_post_auth0_change_password = async (
 	const authorization_header = req.headers['authorization']
 	const jwt_token = header_authorization_jwt_token_(authorization_header)
 	if (!jwt_token) {
-		res.statusCode = 401
-		res.end('Unauthorized')
-		return
+		return response_(401, 'Unauthorized')
 	}
 	const jwt_token_decoded_ = jwt_token_decoded__b(ctx)
 	const patch_auth0_v2_user = patch_auth0_v2_user_b(ctx)
 	const password_user = await password_user_()
 	const { user_id } = password_user
 	if (!password_user) {
-		res.statusCode = 401
-		res.end('Unauthorized')
-		return
+		return response_(401, 'Unauthorized')
 	}
 	const { body } = req
 	const { password } = body
@@ -38,11 +34,18 @@ export const polka_post_auth0_change_password = async (
 	const user = await response.json()
 	if (user.error) {
 		console.trace(`patch_auth0_v2_user error response: ${response.status}:\n${user}`)
-		res.statusCode = 401
-		res.end('Unauthorized')
-		return
+		return response_(401, 'Unauthorized')
 	}
-	res.end(JSON.stringify({ status: 200 }))
+	return response_(
+		200, JSON.stringify({ status: 200 }), { 'Content-Type': 'application/json' }
+	)
+	function response_(status, body, headers) {
+		if (res) {
+			res.write(status, headers)
+			res.end(body)
+		}
+		return new Response(body, { status })
+	}
 	async function password_user_() {
 		const jwt_token_decoded = await jwt_token_decoded_(req.headers['authorization'])
 		const user_id = user_id_(jwt_token_decoded)

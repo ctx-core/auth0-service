@@ -1,5 +1,11 @@
 # @ctx-core/auth0-service
 
+## 2.1.0
+
+### Minor Changes
+
+- polka_post_auth0_change_password: returns isomorphic Response object,ServerResponse argument is optional
+
 ## 2.0.23
 
 ### Patch Changes
