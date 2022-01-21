@@ -42,7 +42,7 @@
 		"@ctx-core/fetch": "workspace:^11.0.113",
 		"@ctx-core/jwt": "workspace:^10.0.50",
 		"@ctx-core/logger": "workspace:^9.0.44",
-		"@ctx-core/object": "workspace:^22.0.12",
+		"@ctx-core/object": "workspace:^22.0.13",
 		"auth0-js": "^9.18.1",
 		"jsonwebtoken": "^8.5.1",
 		"polka": "next"
