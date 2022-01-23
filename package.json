@@ -37,9 +37,9 @@
 	},
 	"dependencies": {
 		"@ctx-core/auth0": "workspace:^28.1.0",
-		"@ctx-core/auth0-management": "workspace:^7.1.0",
+		"@ctx-core/auth0-management": "workspace:^7.1.1",
 		"@ctx-core/error": "workspace:^11.1.23",
-		"@ctx-core/fetch-undici": "workspace:^1.0.0",
+		"@ctx-core/fetch-undici": "workspace:^1.0.1",
 		"@ctx-core/jwt": "workspace:^10.0.50",
 		"@ctx-core/logger": "workspace:^9.0.44",
 		"@ctx-core/object": "workspace:^22.0.13",
