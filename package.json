@@ -37,7 +37,7 @@
 	},
 	"dependencies": {
 		"@ctx-core/auth0": "workspace:^28.1.0",
-		"@ctx-core/auth0-management": "workspace:^7.1.1",
+		"@ctx-core/auth0-management": "workspace:^7.1.2",
 		"@ctx-core/error": "workspace:^11.1.23",
 		"@ctx-core/fetch-undici": "workspace:^1.0.1",
 		"@ctx-core/jwt": "workspace:^10.0.50",
@@ -52,7 +52,6 @@
 		"@types/trouter": "^3.1.1",
 		"c8": "^7.11.0",
 		"check-dts": "^0.6.6",
-		"rimraf": "^3.0.2",
 		"svelte": "^3.46.2",
 		"tsm": "^2.2.1",
 		"typescript": "next",
