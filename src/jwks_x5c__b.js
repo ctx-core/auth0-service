@@ -1,5 +1,5 @@
 import { get_jwks_json_b } from '@ctx-core/auth0'
-import { throw_fetch_response } from '@ctx-core/fetch'
+import { throw_fetch_response } from '@ctx-core/fetch-undici'
 import { be_ } from '@ctx-core/object'
 const key = 'jwks_x5c_'
 /** @type {import('./jwks_x5c__b.d.ts').jwks_x5c__b} */
