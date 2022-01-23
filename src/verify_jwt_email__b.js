@@ -17,8 +17,7 @@ export const verify_jwt_email__b = be_(key, ctx=>{
 				AUTH0_DOMAIN,
 				user_id
 			}
-			const response = await get_auth0_v2_user_b(ctx)(get_auth0_v2_user_params)
-			const user = await response.json()
+			const [user] = await get_auth0_v2_user_b(ctx)(get_auth0_v2_user_params)
 			validate_auth0_user(user)
 			email = user.email
 		}

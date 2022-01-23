@@ -22,7 +22,6 @@ export const polka_post_auth0_change_password = async (
 		return response_(401, 'Unauthorized')
 	}
 	const jwt_token_decoded_ = jwt_token_decoded__b(ctx)
-	const patch_auth0_v2_user = patch_auth0_v2_user_b(ctx)
 	const password_user = await password_user_()
 	const { user_id } = password_user
 	if (!password_user) {
@@ -30,8 +29,7 @@ export const polka_post_auth0_change_password = async (
 	}
 	const { body } = req
 	const { password } = body
-	const response = await patch_auth0_v2_user(user_id, { password })
-	const user = await response.json()
+	const [user, response] = await patch_auth0_v2_user_b(ctx)(user_id, { password })
 	if (user.error) {
 		console.trace(`patch_auth0_v2_user error response: ${response.status}:\n${user}`)
 		return response_(401, 'Unauthorized')
@@ -50,8 +48,7 @@ export const polka_post_auth0_change_password = async (
 		const jwt_token_decoded = await jwt_token_decoded_(req.headers['authorization'])
 		const user_id = user_id_(jwt_token_decoded)
 		if (!user_id) return
-		const get_auth0_v2_user_response = await get_auth0_v2_user_b(ctx)({ AUTH0_DOMAIN, user_id })
-		const request_user = await get_auth0_v2_user_response.json()
+		const [request_user] = await get_auth0_v2_user_b(ctx)({ AUTH0_DOMAIN, user_id })
 		const { email } = request_user
 		if (!email) return
 		if (is_username_password_authentication(request_user)) {

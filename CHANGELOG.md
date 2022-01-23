@@ -1,5 +1,19 @@
 # @ctx-core/auth0-service
 
+## 2.2.4
+
+### Patch Changes
+
+- use fetch instead of safe_fetch
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/auth0@29.0.0
+  - @ctx-core/auth0-management@8.0.0
+  - @ctx-core/fetch-undici@1.1.0
+
 ## 2.2.3
 
 ### Patch Changes
