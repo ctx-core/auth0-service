@@ -1,5 +1,18 @@
 # @ctx-core/auth0-service
 
+## 3.0.0
+
+### Major Changes
+
+- flatten functions: remove \_b suffix from exports
+
+### Patch Changes
+
+- Updated dependencies
+  - @ctx-core/auth0@30.0.0
+  - @ctx-core/auth0-management@9.0.0
+  - @ctx-core/fetch-undici@1.1.1
+
 ## 2.2.8
 
 ### Patch Changes
