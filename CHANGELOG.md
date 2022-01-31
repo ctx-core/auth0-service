@@ -1,5 +1,11 @@
 # @ctx-core/auth0-service
 
+## 3.0.1
+
+### Patch Changes
+
+- update dependencies
+
 ## 3.0.0
 
 ### Major Changes
