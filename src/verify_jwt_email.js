@@ -1,6 +1,6 @@
 import { user_id_, validate_auth0_user } from '@ctx-core/auth0'
 import { get_auth0_v2_user } from '@ctx-core/auth0-management'
-import { koa_jwt_token_decoded_ } from './koa_jwt_token_decoded_.js'
+import { strict_verify_jwt_token } from './strict_verify_jwt_token.js'
 /**
  * @param {import('@ctx-core/object').Ctx}ctx
  * @param {string}authorization
@@ -8,7 +8,7 @@ import { koa_jwt_token_decoded_ } from './koa_jwt_token_decoded_.js'
  * @private
  */
 export async function verify_jwt_email(ctx, authorization) {
-	const koajwt_token_decoded_fn = await koa_jwt_token_decoded_(ctx, authorization)
+	const koajwt_token_decoded_fn = await strict_verify_jwt_token(ctx, authorization)
 	let email = koajwt_token_decoded_fn.email
 	if (!email) {
 		const user_id = user_id_(koajwt_token_decoded_fn)

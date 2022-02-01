@@ -1,5 +1,24 @@
 # @ctx-core/auth0-service
 
+## 4.0.1
+
+### Patch Changes
+
+- Updated dependencies
+  - @ctx-core/auth0@31.0.0
+  - @ctx-core/auth0-management@9.0.6
+
+## 4.0.0
+
+### Major Changes
+
+- polka_post_auth0_change_password=>POST_auth0_change_password
+
+### Minor Changes
+
+- strict*verify_jwt_token from deprecated koa_jwt_token_decoded*
+- verify*jwt_token from deprecated jwt_token_decoded*
+
 ## 3.0.5
 
 ### Patch Changes
