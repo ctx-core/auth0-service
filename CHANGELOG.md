@@ -1,5 +1,11 @@
 # @ctx-core/auth0-service
 
+## 3.0.5
+
+### Patch Changes
+
+- fix: export verify_jwt_user_id
+
 ## 3.0.4
 
 ### Patch Changes
