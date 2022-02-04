@@ -11,9 +11,7 @@ const AUTH0_DOMAIN = process.env.AUTH0_DOMAIN
 if (!AUTH0_DOMAIN) throw `AUTH0_DOMAIN env variable not defined`
 /** @typedef {import('auth0-js').Auth0UserProfile} Auth0UserProfile */
 /** @type {import('./POST_auth0_change_password.d.ts').POST_auth0_change_password} */
-export const POST_auth0_change_password = async (
-	ctx, request
-)=>{
+export const POST_auth0_change_password = async (ctx, request)=>{
 	log(`${logPrefix}|POST_auth0_change_password`)
 	const authorization_header = request.headers['authorization']
 	const jwt_token = header_authorization_jwt_token_(authorization_header)
