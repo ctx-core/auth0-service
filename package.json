@@ -40,7 +40,7 @@
 		"@ctx-core/auth0-management": "workspace:^9.0.18",
 		"@ctx-core/error": "workspace:^11.3.1",
 		"@ctx-core/fetch-undici": "workspace:^1.1.5",
-		"@ctx-core/jwt": "workspace:^10.1.0",
+		"@ctx-core/jwt": "workspace:^10.1.1",
 		"@ctx-core/logger": "workspace:^9.0.44",
 		"@ctx-core/object": "workspace:*",
 		"auth0-js": "^9.19.0",
