@@ -7,6 +7,6 @@ import { strict_verify_jwt_token } from './strict_verify_jwt_token.js'
  * @private
  */
 export async function verify_jwt_user_id(ctx, authorization) {
-	const jwt_token_decoded = await strict_verify_jwt_token(ctx, authorization)
-	return user_id_(jwt_token_decoded)
+	const verified_jwt_token = await strict_verify_jwt_token(ctx, authorization)
+	return user_id_(verified_jwt_token)
 }

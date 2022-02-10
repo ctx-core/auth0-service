@@ -10,7 +10,7 @@ import { verify_jwt_token } from './verify_jwt_token.js'
 export async function strict_verify_jwt_token(ctx, authorization) {
 	const jwt_token = header_authorization_jwt_token_(authorization)
 	if (!jwt_token) {
-		throw_bad_credentials({})
+		throw_bad_credentials()
 	}
 	return await verify_jwt_token(ctx, jwt_token)
 }
