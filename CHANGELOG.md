@@ -1,5 +1,11 @@
 # @ctx-core/auth0-service
 
+## 4.0.14
+
+### Patch Changes
+
+- fix: POST_auth0_change_password: getting authorization token from request.header
+
 ## 4.0.13
 
 ### Patch Changes
