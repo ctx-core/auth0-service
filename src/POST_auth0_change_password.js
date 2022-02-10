@@ -13,8 +13,8 @@ if (!AUTH0_DOMAIN) throw `AUTH0_DOMAIN env variable not defined`
 /** @type {import('./POST_auth0_change_password.d.ts').POST_auth0_change_password} */
 export const POST_auth0_change_password = async (ctx, request)=>{
 	log(`${logPrefix}|POST_auth0_change_password`)
-	const authorization_header = request.headers['authorization']
-	const jwt_token = header_authorization_jwt_token_(authorization_header)
+	const authorization = request.headers.get('authorization')
+	const jwt_token = header_authorization_jwt_token_(authorization)
 	if (!jwt_token) {
 		return new Response('Unauthorized', { status: 401 })
 	}
@@ -35,7 +35,7 @@ export const POST_auth0_change_password = async (ctx, request)=>{
 		headers: { 'Content-Type': 'application/json' }
 	})
 	async function password_user_() {
-		const jwt_token_decoded = await verify_jwt_token(ctx, request.headers['authorization'])
+		const jwt_token_decoded = await verify_jwt_token(ctx, request.headers['Authorization'])
 		const user_id = user_id_(jwt_token_decoded)
 		if (!user_id) return
 		const [request_user] = await get_auth0_v2_user(ctx, { AUTH0_DOMAIN, user_id })
