@@ -10,8 +10,5 @@ export async function jwks_x5c_(ctx) {
 	if (!response.ok) {
 		await throw_fetch_response(response)
 	}
-	const { keys } = jwks_json
-	const key = keys[0]
-	const { x5c } = key
-	return x5c
+	return jwks_json.keys[0].x5c
 }
