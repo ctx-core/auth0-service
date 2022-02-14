@@ -1,5 +1,15 @@
 # @ctx-core/auth0-service
 
+## 4.0.23
+
+### Patch Changes
+
+- POST_auth0_change_password: fix: response: Content-Type: application/json
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/auth0@33.2.0
+
 ## 4.0.22
 
 ### Patch Changes
