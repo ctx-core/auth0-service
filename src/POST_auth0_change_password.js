@@ -1,8 +1,6 @@
 /// <reference lib="dom" />
-import { user_id_ } from '@ctx-core/auth0'
-import {
-	get_auth0_v2_user, get_auth0_v2_users_by_email, patch_auth0_v2_user
-} from '@ctx-core/auth0-management'
+import { unauthorized_auth0_error_, user_id_ } from '@ctx-core/auth0'
+import { get_auth0_v2_user, get_auth0_v2_users_by_email, patch_auth0_v2_user } from '@ctx-core/auth0-management'
 import { header_authorization_jwt_token_ } from '@ctx-core/jwt'
 import { log } from '@ctx-core/logger'
 import { verify_jwt_token } from './verify_jwt_token.js'
@@ -16,7 +14,7 @@ export const POST_auth0_change_password = async (ctx, request)=>{
 	const authorization = request.headers.get('authorization')
 	const jwt_token = header_authorization_jwt_token_(authorization)
 	if (!jwt_token) {
-		return new Response('Unauthorized', { status: 401 })
+		return unauthorized_response_()
 	}
 	const password_user = await password_user_()
 	const { user_id } = password_user
@@ -26,13 +24,14 @@ export const POST_auth0_change_password = async (ctx, request)=>{
 	const body = await request.json()
 	const { password } = body
 	const [user, response] = await patch_auth0_v2_user(ctx, user_id, { password })
-	if (user.error) {
-		console.trace(`patch_auth0_v2_user error response: ${response.status}:\n${user}`)
-		return new Response('Unauthorized', { status: 401 })
+	if (!response.ok) {
+		if (user.error) {
+			console.trace(`patch_auth0_v2_user error response: ${response.status}:\n${user}`)
+			return unauthorized_response_()
+		}
 	}
 	return new Response(body, {
-		status: 200,
-		headers: { 'Content-Type': 'application/json' }
+		status: 200, headers: new Headers({ 'Content-Type': 'application/json' })
 	})
 	async function password_user_() {
 		const jwt_token_decoded = await verify_jwt_token(ctx, request.headers['Authorization'])
@@ -56,4 +55,9 @@ export const POST_auth0_change_password = async (ctx, request)=>{
 	function is_username_password_authentication(user) {
 		return user.identities[0].connection == 'Username-Password-Authentication'
 	}
+}
+function unauthorized_response_() {
+	return new Response(JSON.stringify(unauthorized_auth0_error_()), {
+		status: 401, headers: new Headers({ 'Content-Type': 'application/json' })
+	})
 }
