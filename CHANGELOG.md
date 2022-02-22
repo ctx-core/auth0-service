@@ -1,5 +1,11 @@
 # @ctx-core/auth0-service
 
+## 4.0.24
+
+### Patch Changes
+
+- fix: POST_auth0_change_password: auth errors,response
+
 ## 4.0.23
 
 ### Patch Changes
