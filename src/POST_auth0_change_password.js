@@ -1,6 +1,7 @@
 /// <reference lib="dom" />
 import { unauthorized_auth0_error_, user_id_ } from '@ctx-core/auth0'
 import { get_auth0_v2_user, get_auth0_v2_users_by_email, patch_auth0_v2_user } from '@ctx-core/auth0-management'
+import { Headers } from '@ctx-core/fetch-undici'
 import { header_authorization_jwt_token_ } from '@ctx-core/jwt'
 import { log } from '@ctx-core/logger'
 import { verify_jwt_token } from './verify_jwt_token.js'
@@ -16,13 +17,22 @@ export const POST_auth0_change_password = async (ctx, request)=>{
 	if (!jwt_token) {
 		return unauthorized_response_()
 	}
-	const password_user = await password_user_()
-	const { user_id } = password_user
+	let password_user
+	try {
+		password_user = await password_user_()
+	} catch (err) {
+		if (err.name !== 'JsonWebTokenError') {
+			throw err
+		}
+		console.error(err)
+	}
 	if (!password_user) {
 		return new Response('Unauthorized', { status: 401 })
 	}
-	const body = await request.json()
-	const { password } = body
+	const { user_id } = password_user
+	const text = await request.text()
+	const json = JSON.parse(text)
+	const { password } = json
 	const [user, response] = await patch_auth0_v2_user(ctx, user_id, { password })
 	if (!response.ok) {
 		if (user.error) {
@@ -30,11 +40,11 @@ export const POST_auth0_change_password = async (ctx, request)=>{
 			return unauthorized_response_()
 		}
 	}
-	return new Response(body, {
+	return new Response(text, {
 		status: 200, headers: new Headers({ 'Content-Type': 'application/json' })
 	})
 	async function password_user_() {
-		const jwt_token_decoded = await verify_jwt_token(ctx, request.headers['Authorization'])
+		const jwt_token_decoded = await verify_jwt_token(ctx, jwt_token)
 		const user_id = user_id_(jwt_token_decoded)
 		if (!user_id) return
 		const [request_user] = await get_auth0_v2_user(ctx, { AUTH0_DOMAIN, user_id })
@@ -53,7 +63,7 @@ export const POST_auth0_change_password = async (ctx, request)=>{
 	 * @returns {boolean}
 	 */
 	function is_username_password_authentication(user) {
-		return user.identities[0].connection == 'Username-Password-Authentication'
+		return user.identities[0].connection === 'Username-Password-Authentication'
 	}
 }
 function unauthorized_response_() {
