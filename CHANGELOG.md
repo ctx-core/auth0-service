@@ -1,5 +1,11 @@
 # @ctx-core/auth0-service
 
+## 4.0.25
+
+### Patch Changes
+
+- fix: POST_auth0_change_password: { Headers } from 'undici'
+
 ## 4.0.24
 
 ### Patch Changes

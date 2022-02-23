@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/auth0-service",
-	"version": "4.0.24",
+	"version": "4.0.25",
 	"description": "ctx-core auth0 ui component & express endpoints",
 	"keywords": [
 		"ctx-core",
@@ -44,7 +44,8 @@
 		"@ctx-core/logger": "^9.0.44",
 		"@ctx-core/object": "*",
 		"auth0-js": "^9.19.0",
-		"jsonwebtoken": "^8.5.1"
+		"jsonwebtoken": "^8.5.1",
+		"undici": "^4.14.1"
 	},
 	"devDependencies": {
 		"@types/jsonwebtoken": "^8.5.8",
