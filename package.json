@@ -45,7 +45,7 @@
 		"@ctx-core/object": "*",
 		"auth0-js": "^9.19.0",
 		"jsonwebtoken": "^8.5.1",
-		"undici": "^4.14.1"
+		"undici": "^4.15.0"
 	},
 	"devDependencies": {
 		"@types/jsonwebtoken": "^8.5.8",
