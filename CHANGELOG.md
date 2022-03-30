@@ -1,5 +1,13 @@
 # @ctx-core/auth0-service
 
+## 4.0.41
+
+### Patch Changes
+
+- ddd775862: undici: ^4.16.0 -> ^5.0.0
+- Updated dependencies [ddd775862]
+  - @ctx-core/fetch-undici@1.2.13
+
 ## 4.0.40
 
 ### Patch Changes
