@@ -1,5 +1,5 @@
 /// <reference lib="dom" />
-import { Headers } from 'undici'
+import { Headers } from '@ctx-core/fetch-undici'
 import { unauthorized_auth0_error_, user_id_ } from '@ctx-core/auth0'
 import { get_auth0_v2_user, get_auth0_v2_users_by_email, patch_auth0_v2_user } from '@ctx-core/auth0-management'
 import { header_authorization_jwt_token_ } from '@ctx-core/jwt'

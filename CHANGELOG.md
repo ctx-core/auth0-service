@@ -1,5 +1,11 @@
 # @ctx-core/auth0-service
 
+## 4.0.48
+
+### Patch Changes
+
+- POST_auth0_change_password: fix: rollup.js integration: Headers from '@ctx-core/fetch-undici'
+
 ## 4.0.47
 
 ### Patch Changes
