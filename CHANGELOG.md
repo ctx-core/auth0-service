@@ -1,5 +1,14 @@
 # @ctx-core/auth0-service
 
+## 4.0.47
+
+### Patch Changes
+
+- update dependencies
+- Updated dependencies
+  - @ctx-core/auth0@34.2.7
+  - @ctx-core/auth0-management@9.0.47
+
 ## 4.0.46
 
 ### Patch Changes
