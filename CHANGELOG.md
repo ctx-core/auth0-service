@@ -1,5 +1,21 @@
 # @ctx-core/auth0-service
 
+## 4.0.44
+
+### Patch Changes
+
+- package.json: exports: update
+- fix: package.json: exports: + default
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/auth0@34.2.4
+  - @ctx-core/auth0-management@9.0.44
+  - @ctx-core/error@11.4.2
+  - @ctx-core/fetch-undici@1.2.15
+  - @ctx-core/jwt@10.1.4
+  - @ctx-core/logger@9.0.45
+  - @ctx-core/object@22.1.4
+
 ## 4.0.43
 
 ### Patch Changes
