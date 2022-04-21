@@ -51,7 +51,7 @@
 	"devDependencies": {
 		"@types/jsonwebtoken": "^8.5.8",
 		"@types/trouter": "^3.1.1",
-		"c8": "^7.11.0",
+		"c8": "^7.11.2",
 		"check-dts": "^0.6.6",
 		"svelte": "^3.47.0",
 		"tsm": "^2.2.1",
