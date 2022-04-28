@@ -41,7 +41,7 @@
 		"@ctx-core/auth0-management": "^9.0.55",
 		"@ctx-core/error": "^11.4.6",
 		"@ctx-core/fetch-undici": "^2.1.4",
-		"@ctx-core/jwt": "^10.1.8",
+		"@ctx-core/jwt": "^10.1.9",
 		"@ctx-core/logger": "^9.0.45",
 		"@ctx-core/object": "^22.1.9",
 		"auth0-js": "^9.19.0",
