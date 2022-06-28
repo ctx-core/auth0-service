@@ -1,5 +1,11 @@
 # @ctx-core/auth0-service
 
+## 4.0.72
+
+### Patch Changes
+
+- fix: - auth0-js dependency: use @types/auth0-js instead
+
 ## 4.0.71
 
 ### Patch Changes
