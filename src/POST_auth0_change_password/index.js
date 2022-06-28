@@ -4,7 +4,7 @@ import { unauthorized_auth0_error_, user_id_ } from '@ctx-core/auth0'
 import { get_auth0_v2_user, get_auth0_v2_users_by_email, patch_auth0_v2_user } from '@ctx-core/auth0-management'
 import { header_authorization_jwt_token_ } from '@ctx-core/jwt'
 import { log } from '@ctx-core/logger'
-import { verify_jwt_token } from './verify_jwt_token.js'
+import { verify_jwt_token } from '../verify_jwt_token/index.js'
 const logPrefix = '@ctx-core/auth0-service > POST_auth0_change_password.ts'
 const AUTH0_DOMAIN = process.env.AUTH0_DOMAIN
 if (!AUTH0_DOMAIN) throw `AUTH0_DOMAIN env variable not defined`

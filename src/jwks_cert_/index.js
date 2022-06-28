@@ -1,4 +1,4 @@
-import { jwks_x5c_ } from './jwks_x5c_.js'
+import { jwks_x5c_ } from '../jwks_x5c_/index.js'
 /**
  * @param {import('@ctx-core/object').Ctx}ctx
  * @return {Promise<string>}

@@ -1,5 +1,5 @@
 import { user_id_ } from '@ctx-core/auth0'
-import { strict_verify_jwt_token } from './strict_verify_jwt_token.js'
+import { strict_verify_jwt_token } from '../strict_verify_jwt_token/index.js'
 /**
  * @param {import('@ctx-core/object').Ctx}ctx
  * @param {string}authorization

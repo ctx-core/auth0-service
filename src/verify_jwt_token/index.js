@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken'
-import { jwks_cert_ } from './jwks_cert_.js'
+import { jwks_cert_ } from '../jwks_cert_/index.js'
 /**
  * @param {import('@ctx-core/object').Ctx}ctx
  * @param {string}jwt_token

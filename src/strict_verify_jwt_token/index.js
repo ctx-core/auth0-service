@@ -1,6 +1,6 @@
 import { throw_bad_credentials } from '@ctx-core/error'
 import { header_authorization_jwt_token_ } from '@ctx-core/jwt'
-import { verify_jwt_token } from './verify_jwt_token.js'
+import { verify_jwt_token } from '../verify_jwt_token/index.js'
 /**
  * @param {import('@ctx-core/object').Ctx}ctx
  * @param {string|undefined}authorization

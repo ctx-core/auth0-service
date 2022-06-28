@@ -1,6 +1,6 @@
 import { user_id_, validate_auth0_user } from '@ctx-core/auth0'
 import { get_auth0_v2_user } from '@ctx-core/auth0-management'
-import { strict_verify_jwt_token } from './strict_verify_jwt_token.js'
+import { strict_verify_jwt_token } from '../strict_verify_jwt_token/index.js'
 /**
  * @param {import('@ctx-core/object').Ctx}ctx
  * @param {string}authorization
