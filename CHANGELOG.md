@@ -1,5 +1,16 @@
 # @ctx-core/auth0-service
 
+## 4.0.74
+
+### Patch Changes
+
+- svelte: ^3.48.0 -> ^3.49.0
+- undici: ^5.6.0 -> ^5.6.1
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/auth0@34.4.6
+  - @ctx-core/fetch-undici@2.2.3
+
 ## 4.0.73
 
 ### Patch Changes
