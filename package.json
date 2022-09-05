@@ -37,13 +37,13 @@
 		"test-unit-coverage": "c8 pnpm test-unit"
 	},
 	"dependencies": {
-		"@ctx-core/auth0": "^35.0.6",
+		"@ctx-core/auth0": "^35.0.7",
 		"@ctx-core/auth0-management": "^9.0.71",
 		"@ctx-core/error": "^11.5.1",
 		"@ctx-core/fetch-undici": "^2.3.5",
-		"@ctx-core/jwt": "^10.1.19",
+		"@ctx-core/jwt": "^10.1.20",
 		"@ctx-core/logger": "^9.0.45",
-		"@ctx-core/object": "^22.2.7",
+		"@ctx-core/object": "^22.2.8",
 		"jsonwebtoken": "^8.5.1",
 		"undici": "^5.10.0"
 	},
