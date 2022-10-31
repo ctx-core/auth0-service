@@ -23,7 +23,7 @@
 		"sourceMap": true,
 		"strict": true,
 		"strictFunctionTypes": true,
-		"target": "ES2021",
+		"target": "ES2022",
 		"typeRoots": [
 			"../../../node_modules/@types",
 			"../../node_modules/@types",
