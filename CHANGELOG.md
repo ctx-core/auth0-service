@@ -1,5 +1,13 @@
 # @ctx-core/auth0-service
 
+## 4.0.91
+
+### Patch Changes
+
+- svelte: ^3.53.0 -> ^3.53.1
+- Updated dependencies
+  - @ctx-core/auth0@35.0.17
+
 ## 4.0.90
 
 ### Patch Changes
