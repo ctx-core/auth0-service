@@ -1,5 +1,19 @@
 # @ctx-core/auth0-service
 
+## 4.0.171
+
+### Patch Changes
+
+- tsconfig.json: - importsNotUsedAsValues
+- Updated dependencies
+  - @ctx-core/auth0@35.0.78
+  - @ctx-core/auth0-management@9.0.135
+  - @ctx-core/error@11.5.14
+  - @ctx-core/fetch-undici@2.3.57
+  - @ctx-core/jwt@10.1.46
+  - @ctx-core/logger@9.0.48
+  - @ctx-core/object@24.1.1
+
 ## 4.0.170
 
 ### Patch Changes
