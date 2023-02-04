@@ -52,7 +52,7 @@
 		"@types/jsonwebtoken": "^9.0.1",
 		"@types/trouter": "^3.1.1",
 		"c8": "^7.12.0",
-		"check-dts": "^0.6.7",
+		"check-dts": "^0.7.0",
 		"svelte": "^3.55.1",
 		"tsx": "^3.12.2",
 		"typescript": "next",
