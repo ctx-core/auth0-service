@@ -1,5 +1,21 @@
 # @ctx-core/auth0-service
 
+## 4.1.0
+
+### Minor Changes
+
+- name convention updates
+
+### Patch Changes
+
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/error@11.6.0
+  - @ctx-core/auth0@35.1.0
+  - @ctx-core/auth0-management@9.1.0
+  - @ctx-core/jwt@10.2.0
+
 ## 4.0.195
 
 ### Patch Changes
