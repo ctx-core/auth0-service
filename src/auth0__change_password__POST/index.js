@@ -1,7 +1,11 @@
 /// <reference lib="dom" />
 import { Headers } from '@ctx-core/fetch-undici'
 import { auth0__unauthorized__error_, user_id_ } from '@ctx-core/auth0'
-import { auth0__v2_user__fetch_get, auth0__v2_users_by_email__fetch_get, auth0__v2_user__fetch_patch } from '@ctx-core/auth0-management'
+import {
+	auth0__v2_user__fetch_get,
+	auth0__v2_user__fetch_patch,
+	auth0__v2_users_by_email__fetch_get,
+} from '@ctx-core/auth0-management'
 import { authorization__header__jwt_token_ } from '@ctx-core/jwt'
 import { log } from '@ctx-core/logger'
 import { auth0__jwt_token__verify } from '../auth0__jwt_token__verify/index.js'
