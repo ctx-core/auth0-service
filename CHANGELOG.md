@@ -1,5 +1,11 @@
 # @ctx-core/auth0-service
 
+## 4.1.43
+
+### Patch Changes
+
+- @ctx-core/logger: ^9.0.49 -> ^9.1.0
+
 ## 4.1.42
 
 ### Patch Changes
