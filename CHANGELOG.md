@@ -1,5 +1,18 @@
 # @ctx-core/auth0-service
 
+## 4.1.107
+
+### Patch Changes
+
+- import*meta_env*() instead of process.env
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/auth0@37.0.0
+  - @ctx-core/auth0-management@9.1.102
+  - @ctx-core/env@17.2.18
+
 ## 4.1.106
 
 ### Patch Changes

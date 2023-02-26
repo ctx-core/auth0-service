@@ -6,13 +6,14 @@ import {
 	auth0__v2_user__fetch_patch,
 	auth0__v2_users_by_email__fetch_get,
 } from '@ctx-core/auth0-management'
+import { import_meta_env_ } from '@ctx-core/env'
 import { authorization__header__jwt_token_ } from '@ctx-core/jwt'
 import { log } from '@ctx-core/logger'
 import { auth0__jwt_token__verify } from '../auth0__jwt_token__verify/index.js'
+/** @typedef {import('auth0').User}User */
 const logPrefix = '@ctx-core/auth0-service > auth0__change_password__POST.ts'
-const AUTH0_DOMAIN = process.env.AUTH0_DOMAIN
+const AUTH0_DOMAIN = import_meta_env_().AUTH0_DOMAIN
 if (!AUTH0_DOMAIN) throw `AUTH0_DOMAIN env variable not defined`
-/** @typedef {import('@types/auth0-js').Auth0UserProfile} Auth0UserProfile */
 /** @type {import('./auth0__change_password__POST.d.ts').auth0__change_password__POST} */
 export const auth0__change_password__POST = async (ctx, request)=>{
 	log(`${logPrefix}|auth0__change_password__POST`)
@@ -51,19 +52,21 @@ export const auth0__change_password__POST = async (ctx, request)=>{
 		const jwt_token_decoded = await auth0__jwt_token__verify(ctx, jwt_token)
 		const user_id = user_id_(jwt_token_decoded)
 		if (!user_id) return
-		const [request_user] = await auth0__v2_user__fetch_get(ctx, { AUTH0_DOMAIN, user_id })
+		const [request_user] =
+			await auth0__v2_user__fetch_get(ctx, { AUTH0_DOMAIN, user_id })
 		const { email } = request_user
 		if (!email) return
 		if (is_username_password_authentication(request_user)) {
 			return request_user
 		}
-		const [auth0_user_profile_a] = await auth0__v2_users_by_email__fetch_get(ctx, { AUTH0_DOMAIN, email })
+		const [auth0_user_profile_a] =
+			await auth0__v2_users_by_email__fetch_get(ctx, { AUTH0_DOMAIN, email })
 		for (const auth0_user_profile of auth0_user_profile_a) {
 			if (is_username_password_authentication(auth0_user_profile)) return auth0_user_profile
 		}
 	}
 	/**
-	 * @param {Auth0UserProfile} user
+	 * @param {User} user
 	 * @returns {boolean}
 	 */
 	function is_username_password_authentication(user) {

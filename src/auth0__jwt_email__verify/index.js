@@ -1,5 +1,6 @@
-import { user_id_, auth0__user__validate } from '@ctx-core/auth0'
+import { auth0__user__validate, user_id_ } from '@ctx-core/auth0'
 import { auth0__v2_user__fetch_get } from '@ctx-core/auth0-management'
+import { import_meta_env_ } from '@ctx-core/env'
 import { auth0__jwt_token__verify_strict } from '../auth0__jwt_token__verify_strict/index.js'
 /**
  * @param {import('@ctx-core/object').Ctx}ctx
@@ -8,11 +9,12 @@ import { auth0__jwt_token__verify_strict } from '../auth0__jwt_token__verify_str
  * @private
  */
 export async function auth0__jwt_email__verify(ctx, authorization) {
-	const verified_jwt_token = await auth0__jwt_token__verify_strict(ctx, authorization)
+	const verified_jwt_token =
+		await auth0__jwt_token__verify_strict(ctx, authorization)
 	let { email } = verified_jwt_token
 	if (!email) {
 		const user_id = user_id_(verified_jwt_token)
-		const AUTH0_DOMAIN = process.env.AUTH0_DOMAIN
+		const AUTH0_DOMAIN = import_meta_env_().AUTH0_DOMAIN
 		/** @type {import('@ctx-core/auth0').get_auth0_v2_user_params_T} */
 		const get_auth0_v2_user_params = {
 			AUTH0_DOMAIN,
