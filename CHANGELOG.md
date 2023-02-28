@@ -1,5 +1,38 @@
 # @ctx-core/auth0-service
 
+## 4.2.0
+
+### Minor Changes
+
+- - auth0**header**authorization**access_token_o**validate: aliased by strict_verify_jwt_token
+- - import.meta.env.AUTH0_DOMAIN check
+- - auth0**access*token_o*: aliased by auth0**jwt_token\_\_verify
+- - auth0**header**authorization**email**validate: aliased by verify_jwt_email
+- - auth0**header**authorization**user_id**validate: aliased by verify_jwt_user_id
+
+### Patch Changes
+
+- package.json:
+
+  exports: - browser
+  ∋ @ctx-core/function
+
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/error@11.6.11
+  - @ctx-core/auth0-management@9.2.0
+  - @ctx-core/auth0@37.5.0
+
 ## 4.1.118
 
 ### Patch Changes
