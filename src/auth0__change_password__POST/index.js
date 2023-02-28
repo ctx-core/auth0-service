@@ -1,5 +1,4 @@
 /// <reference lib="dom" />
-import { Headers } from '@ctx-core/fetch-undici'
 import { auth0__unauthorized__error_, user_id_ } from '@ctx-core/auth0'
 import {
 	auth0__v2_user__fetch_get,
@@ -7,21 +6,28 @@ import {
 	auth0__v2_users_by_email__fetch_get,
 } from '@ctx-core/auth0-management'
 import { import_meta_env_ } from '@ctx-core/env'
+import { Headers } from '@ctx-core/fetch-undici'
 import { authorization__header__jwt_token_ } from '@ctx-core/jwt'
 import { log } from '@ctx-core/logger'
 import { auth0__jwt_token__verify } from '../auth0__jwt_token__verify/index.js'
 /** @typedef {import('auth0').User}User */
-const logPrefix = '@ctx-core/auth0-service > auth0__change_password__POST.ts'
-const AUTH0_DOMAIN = import_meta_env_().AUTH0_DOMAIN
+/** @typedef {import('@ctx-core/object').Ctx}Ctx */
+const logPrefix = '@ctx-core/auth0-service > auth0__change_password__POST'
+const { AUTH0_DOMAIN } = import_meta_env_()
 if (!AUTH0_DOMAIN) throw `AUTH0_DOMAIN env variable not defined`
-/** @type {import('./auth0__change_password__POST.d.ts').auth0__change_password__POST} */
-export const auth0__change_password__POST = async (ctx, request)=>{
+/**
+ * @param {Ctx}ctx
+ * @param {Request}request
+ * @returns {Promise<Response>}
+ */
+export async function auth0__change_password__POST(ctx, request) {
 	log(`${logPrefix}|auth0__change_password__POST`)
 	const authorization = request.headers.get('authorization')
 	const jwt_token = authorization__header__jwt_token_(authorization)
 	if (!jwt_token) {
 		return unauthorized_response_()
 	}
+	/** @type {User} */
 	let password_user
 	try {
 		password_user = await password_user_()
@@ -38,7 +44,8 @@ export const auth0__change_password__POST = async (ctx, request)=>{
 	const text = await request.text()
 	const json = JSON.parse(text)
 	const { password } = json
-	const [user, response] = await auth0__v2_user__fetch_patch(ctx, user_id, { password })
+	const [user, response] =
+		await auth0__v2_user__fetch_patch(ctx, user_id, { password })
 	if (!response.ok) {
 		if (user.error) {
 			console.trace(`auth0__v2_user__fetch_patch error response: ${response.status}:\n${user}`)
@@ -48,6 +55,10 @@ export const auth0__change_password__POST = async (ctx, request)=>{
 	return new Response(text, {
 		status: 200, headers: new Headers({ 'Content-Type': 'application/json' })
 	})
+	/**
+	 * @returns {Promise<User|undefined>}
+	 * @private
+	 */
 	async function password_user_() {
 		const jwt_token_decoded = await auth0__jwt_token__verify(ctx, jwt_token)
 		const user_id = user_id_(jwt_token_decoded)
@@ -73,11 +84,15 @@ export const auth0__change_password__POST = async (ctx, request)=>{
 		return user.identities[0].connection === 'Username-Password-Authentication'
 	}
 }
+export {
+	auth0__change_password__POST as POST_auth0_change_password,
+}
+/**
+ * @returns {Response}
+ * @private
+ */
 function unauthorized_response_() {
 	return new Response(JSON.stringify(auth0__unauthorized__error_()), {
 		status: 401, headers: new Headers({ 'Content-Type': 'application/json' })
 	})
-}
-export {
-	auth0__change_password__POST as POST_auth0_change_password,
 }
