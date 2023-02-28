@@ -1,20 +1,17 @@
 /// <reference lib="dom" />
-import { auth0__unauthorized__error_, user_id_ } from '@ctx-core/auth0'
+import { auth0__unauthorized__error_, auth0__user_id_ } from '@ctx-core/auth0'
 import {
 	auth0__v2_user__fetch_get,
 	auth0__v2_user__fetch_patch,
 	auth0__v2_users_by_email__fetch_get,
 } from '@ctx-core/auth0-management'
-import { import_meta_env_ } from '@ctx-core/env'
 import { Headers } from '@ctx-core/fetch-undici'
 import { authorization__header__jwt_token_ } from '@ctx-core/jwt'
 import { log } from '@ctx-core/logger'
-import { auth0__jwt_token__verify } from '../auth0__jwt_token__verify/index.js'
+import { auth0__access_token_o_ } from '../auth0__access_token_o_/index.js'
 /** @typedef {import('auth0').User}User */
 /** @typedef {import('@ctx-core/object').Ctx}Ctx */
 const logPrefix = '@ctx-core/auth0-service > auth0__change_password__POST'
-const { AUTH0_DOMAIN } = import_meta_env_()
-if (!AUTH0_DOMAIN) throw `AUTH0_DOMAIN env variable not defined`
 /**
  * @param {Ctx}ctx
  * @param {Request}request
@@ -23,8 +20,8 @@ if (!AUTH0_DOMAIN) throw `AUTH0_DOMAIN env variable not defined`
 export async function auth0__change_password__POST(ctx, request) {
 	log(`${logPrefix}|auth0__change_password__POST`)
 	const authorization = request.headers.get('authorization')
-	const jwt_token = authorization__header__jwt_token_(authorization)
-	if (!jwt_token) {
+	const access_token = authorization__header__jwt_token_(authorization)
+	if (!access_token) {
 		return unauthorized_response_()
 	}
 	/** @type {User} */
@@ -60,8 +57,8 @@ export async function auth0__change_password__POST(ctx, request) {
 	 * @private
 	 */
 	async function password_user_() {
-		const jwt_token_decoded = await auth0__jwt_token__verify(ctx, jwt_token)
-		const user_id = user_id_(jwt_token_decoded)
+		const access_token_o = await auth0__access_token_o_(ctx, access_token)
+		const user_id = auth0__user_id_(access_token_o)
 		if (!user_id) return
 		const [request_user] =
 			await auth0__v2_user__fetch_get(ctx, { AUTH0_DOMAIN, user_id })
