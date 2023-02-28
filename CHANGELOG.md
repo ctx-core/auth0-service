@@ -1,5 +1,11 @@
 # @ctx-core/auth0-service
 
+## 4.2.4
+
+### Patch Changes
+
+- auth0**header**authorization**email**validate: ∋ AUTH0*DOMAIN*
+
 ## 4.2.3
 
 ### Patch Changes
