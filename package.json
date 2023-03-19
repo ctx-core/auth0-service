@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/auth0-service",
-	"version": "4.2.74",
+	"version": "4.2.75",
 	"description": "ctx-core auth0 ui component & express endpoints",
 	"keywords": [
 		"ctx-core",
@@ -35,8 +35,8 @@
 		"test-unit-coverage": "c8 pnpm test-unit"
 	},
 	"dependencies": {
-		"@ctx-core/auth0": "^37.8.3",
-		"@ctx-core/auth0-management": "^9.2.67",
+		"@ctx-core/auth0": "^37.8.4",
+		"@ctx-core/auth0-management": "^9.2.68",
 		"@ctx-core/error": "^11.6.20",
 		"@ctx-core/fetch-undici": "^2.3.157",
 		"@ctx-core/function": "^21.12.1",
