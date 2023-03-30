@@ -1,5 +1,16 @@
 # @ctx-core/auth0-service
 
+## 4.2.102
+
+### Patch Changes
+
+- @ctx-core/function: ^21.12.2 -> ^21.13.0
+- Updated dependencies
+  - @ctx-core/auth0@38.0.5
+  - @ctx-core/jwt@10.4.18
+  - @ctx-core/object@27.3.2
+  - @ctx-core/auth0-management@9.2.93
+
 ## 4.2.101
 
 ### Patch Changes
