@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/auth0-service",
-	"version": "4.2.132",
+	"version": "4.2.133",
 	"description": "ctx-core auth0 ui component & express endpoints",
 	"keywords": [
 		"ctx-core",
@@ -38,13 +38,13 @@
 		"@ctx-core/auth0": "^38.0.34",
 		"@ctx-core/auth0-management": "^9.2.124",
 		"@ctx-core/error": "^12.3.7",
-		"@ctx-core/fetch-undici": "^2.6.13",
+		"@ctx-core/fetch-undici": "^2.6.14",
 		"@ctx-core/function": "^21.17.0",
 		"@ctx-core/jwt": "^10.4.32",
 		"@ctx-core/logger": "^9.1.0",
 		"@ctx-core/object": "^27.4.4",
 		"jsonwebtoken": "^9.0.0",
-		"undici": "^5.21.0"
+		"undici": "^5.21.1"
 	},
 	"devDependencies": {
 		"@types/auth0": "^3.3.1",
