@@ -8,7 +8,8 @@ import { auth0__access_token_o_ } from '../auth0__access_token_o_/index.js'
  * @private
  */
 export async function auth0__header__authorization__access_token_o__validate(
-	ctx, authorization
+	ctx,
+	authorization
 ) {
 	const jwt_token = authorization__header__jwt_token_(authorization)
 	if (!jwt_token) {

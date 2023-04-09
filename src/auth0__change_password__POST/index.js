@@ -17,7 +17,10 @@ const logPrefix = '@ctx-core/auth0-service > auth0__change_password__POST'
  * @param {Request}request
  * @returns {Promise<Response>}
  */
-export async function auth0__change_password__POST(ctx, request) {
+export async function auth0__change_password__POST(
+	ctx,
+	request
+) {
 	log(`${logPrefix}|auth0__change_password__POST`)
 	const authorization = request.headers.get('authorization')
 	const access_token = authorization__header__jwt_token_(authorization)

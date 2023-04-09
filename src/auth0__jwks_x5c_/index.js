@@ -6,7 +6,10 @@ import { fetch_response__throw } from '@ctx-core/fetch-undici'
  * @private
  */
 export async function auth0__jwks_x5c_(ctx) {
-	const [jwks_json, response] = await jwks__json__fetch_get(ctx)
+	const [
+		jwks_json,
+		response
+	] = await jwks__json__fetch_get(ctx)
 	if (!response.ok) {
 		await fetch_response__throw(response)
 	}

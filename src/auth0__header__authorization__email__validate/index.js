@@ -10,7 +10,8 @@ import {
  * @private
  */
 export async function auth0__header__authorization__email__validate(
-	ctx, authorization
+	ctx,
+	authorization
 ) {
 	const auth0__access_token_o =
 		await auth0__header__authorization__access_token_o__validate(ctx, authorization)

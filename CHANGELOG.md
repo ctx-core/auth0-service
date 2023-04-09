@@ -1,5 +1,11 @@
 # @ctx-core/auth0-service
 
+## 4.2.136
+
+### Patch Changes
+
+- - undici
+
 ## 4.2.135
 
 ### Patch Changes

@@ -1,13 +1,19 @@
 import { auth0__user_id_ } from '@ctx-core/auth0'
-import { auth0__header__authorization__access_token_o__validate } from '../auth0__header__authorization__access_token_o__validate/index.js'
+import {
+	auth0__header__authorization__access_token_o__validate
+} from '../auth0__header__authorization__access_token_o__validate/index.js'
 /**
  * @param {import('@ctx-core/object').Ctx}ctx
  * @param {string}authorization
  * @returns {Promise<string>}
  * @private
  */
-export async function auth0__header__authorization__user_id__validate(ctx, authorization) {
-	const verified_jwt_token = await auth0__header__authorization__access_token_o__validate(ctx, authorization)
+export async function auth0__header__authorization__user_id__validate(
+	ctx,
+	authorization
+) {
+	const verified_jwt_token =
+		await auth0__header__authorization__access_token_o__validate(ctx, authorization)
 	return auth0__user_id_(verified_jwt_token)
 }
 export {
