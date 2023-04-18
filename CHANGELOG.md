@@ -1,5 +1,32 @@
 # @ctx-core/auth0-service
 
+## 4.2.159
+
+### Patch Changes
+
+- @ctx-core/monorepo: ^20.3.1 -> ^20.3.2
+- @ctx-core/dev-tools: 8.1.111 -> 8.1.112
+- @ctx-core/function: ^21.17.16 -> ^21.17.17
+- @ctx-core/queue: ^7.5.18 -> ^7.5.19
+- @ctx-core/git-tools: ^7.0.61 -> ^7.0.62
+- @ctx-core/build: 1.0.299 -> 1.0.300
+- @ctx-core/ctx-core-package-tools: ^8.0.191 -> ^8.0.192
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/auth0@38.0.58
+  - @ctx-core/auth0-management@9.2.148
+  - @ctx-core/error@12.3.25
+  - @ctx-core/fetch-undici@2.6.35
+  - @ctx-core/function@21.17.18
+  - @ctx-core/jwt@10.4.50
+  - @ctx-core/logger@9.1.18
+  - @ctx-core/object@27.4.22
+
 ## 4.2.158
 
 ### Patch Changes
