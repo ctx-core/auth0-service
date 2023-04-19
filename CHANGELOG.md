@@ -1,5 +1,20 @@
 # @ctx-core/auth0-service
 
+## 4.2.160
+
+### Patch Changes
+
+- @ctx-core/monorepo: ^20.3.3 -> ^20.3.4
+- Updated dependencies
+  - @ctx-core/auth0@38.0.59
+  - @ctx-core/auth0-management@9.2.149
+  - @ctx-core/error@12.3.26
+  - @ctx-core/fetch-undici@2.6.36
+  - @ctx-core/function@21.17.19
+  - @ctx-core/jwt@10.4.51
+  - @ctx-core/logger@9.1.19
+  - @ctx-core/object@27.4.23
+
 ## 4.2.159
 
 ### Patch Changes
