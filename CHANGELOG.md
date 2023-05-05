@@ -1915,7 +1915,7 @@
 
 ### Patch Changes
 
-- auth0**header**authorization**email**validate: ∋ AUTH0*DOMAIN*
+- auth0\__header\__authorization\__email\__validate: ∋ AUTH0_DOMAIN_
 
 ## 4.2.3
 
@@ -1956,11 +1956,11 @@
 
 ### Minor Changes
 
-- - auth0**header**authorization**access_token_o**validate: aliased by strict_verify_jwt_token
+- - auth0\__header\__authorization\__access_token_o\__validate: aliased by strict_verify_jwt_token
 - - import.meta.env.AUTH0_DOMAIN check
-- - auth0**access*token_o*: aliased by auth0**jwt_token\_\_verify
-- - auth0**header**authorization**email**validate: aliased by verify_jwt_email
-- - auth0**header**authorization**user_id**validate: aliased by verify_jwt_user_id
+- - auth0\__access_token_o_: aliased by auth0\__jwt_token\__verify
+- - auth0\__header\__authorization\__email\__validate: aliased by verify_jwt_email
+- - auth0\__header\__authorization\__user_id\__validate: aliased by verify_jwt_user_id
 
 ### Patch Changes
 
@@ -2074,7 +2074,7 @@
 
 ### Patch Changes
 
-- import*meta_env*() instead of process.env
+- import_meta_env_() instead of process.env
 - Updated dependencies
 - Updated dependencies
 - Updated dependencies
@@ -4550,7 +4550,7 @@
 
 ### Patch Changes
 
-- fix: @ctx-core/\* dependencies
+- fix: @ctx-core/\_ dependencies
 - Updated dependencies
   - @ctx-core/auth0@34.2.5
   - @ctx-core/auth0-management@9.0.45
@@ -4942,8 +4942,8 @@
 
 ### Minor Changes
 
-- strict*verify_jwt_token from deprecated koa_jwt_token_decoded*
-- verify*jwt_token from deprecated jwt_token_decoded*
+- strict_verify_jwt_token from deprecated koa_jwt_token_decoded_
+- verify_jwt_token from deprecated jwt_token_decoded_
 
 ## 3.0.5
 
@@ -5232,7 +5232,7 @@
 
 ### Patch Changes
 
-- fix: error TS6059: \* is not under 'rootDir': package.json: types: ./dist/index.d.ts
+- fix: error TS6059: \_ is not under 'rootDir': package.json: types: ./dist/index.d.ts
 - Updated dependencies
   - @ctx-core/auth0@27.0.9
   - @ctx-core/auth0-management@7.0.9
@@ -5288,7 +5288,7 @@
 
 ### Patch Changes
 
-- \*.d.ts export
+- \_.d.ts export
 - Updated dependencies
   - @ctx-core/auth0@27.0.5
   - @ctx-core/auth0-management@7.0.5
@@ -5354,7 +5354,7 @@
 
 ### Major Changes
 
-- \*\_b: ctx is a map: @ctx-core/object: 22.0.0
+- \__b: ctx is a map: @ctx-core/object: 22.0.0
 
 ### Patch Changes
 
