@@ -18,7 +18,7 @@ export async function auth0__header__authorization__email__validate(
 	let { email } = auth0__access_token_o
 	if (!email) {
 		const user_id = auth0__user_id_(auth0__access_token_o)
-		/** @type {import('@ctx-core/auth0').auth0__v2_user__GET__fetch2__params_T} */
+		/** @type {import('@ctx-core/auth0').auth0__v2_user__GET__fetch__params_T} */
 		const get_auth0_v2_user_params = {
 			AUTH0_DOMAIN: AUTH0_DOMAIN_(ctx),
 			user_id

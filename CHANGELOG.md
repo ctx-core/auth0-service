@@ -1,5 +1,12 @@
 # @ctx-core/auth0-service
 
+## 4.2.199
+
+### Patch Changes
+
+- @ctx-core/auth0-management: ^9.3.0 -> ^9.4.0
+  - @ctx-core/auth0-management@9.4.1
+
 ## 4.2.198
 
 ### Patch Changes
@@ -1928,7 +1935,7 @@
 
 ### Patch Changes
 
-- auth0\__header\__authorization\__email\__validate: ∋ AUTH0_DOMAIN_
+- auth0\_\_header\_\_authorization\_\_email\__validate: ∋ AUTH0_DOMAIN_
 
 ## 4.2.3
 
@@ -1969,11 +1976,11 @@
 
 ### Minor Changes
 
-- - auth0\__header\__authorization\__access_token_o\__validate: aliased by strict_verify_jwt_token
+- - auth0\_\_header\_\_authorization\_\_access_token_o\_\_validate: aliased by strict_verify_jwt_token
 - - import.meta.env.AUTH0_DOMAIN check
-- - auth0\__access_token_o_: aliased by auth0\__jwt_token\__verify
-- - auth0\__header\__authorization\__email\__validate: aliased by verify_jwt_email
-- - auth0\__header\__authorization\__user_id\__validate: aliased by verify_jwt_user_id
+- - auth0\__access_token_o_: aliased by auth0\_\_jwt_token\_\_verify
+- - auth0\_\_header\_\_authorization\_\_email\_\_validate: aliased by verify_jwt_email
+- - auth0\_\_header\_\_authorization\_\_user_id\_\_validate: aliased by verify_jwt_user_id
 
 ### Patch Changes
 
@@ -2087,7 +2094,7 @@
 
 ### Patch Changes
 
-- import_meta_env_() instead of process.env
+- import*meta_env*() instead of process.env
 - Updated dependencies
 - Updated dependencies
 - Updated dependencies
@@ -4955,8 +4962,8 @@
 
 ### Minor Changes
 
-- strict_verify_jwt_token from deprecated koa_jwt_token_decoded_
-- verify_jwt_token from deprecated jwt_token_decoded_
+- strict*verify_jwt_token from deprecated koa_jwt_token_decoded*
+- verify*jwt_token from deprecated jwt_token_decoded*
 
 ## 3.0.5
 
@@ -5367,7 +5374,7 @@
 
 ### Major Changes
 
-- \__b: ctx is a map: @ctx-core/object: 22.0.0
+- \_\_b: ctx is a map: @ctx-core/object: 22.0.0
 
 ### Patch Changes
 
