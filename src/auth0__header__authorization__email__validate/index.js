@@ -1,5 +1,5 @@
 import { auth0__user__validate, auth0__user_id_, AUTH0_DOMAIN_ } from '@ctx-core/auth0'
-import { auth0__v2_user__fetch_get } from '@ctx-core/auth0-management'
+import { auth0__v2_user__GET__fetch2 } from '@ctx-core/auth0-management'
 import {
 	auth0__header__authorization__access_token_o__validate
 } from '../auth0__header__authorization__access_token_o__validate/index.js'
@@ -18,12 +18,12 @@ export async function auth0__header__authorization__email__validate(
 	let { email } = auth0__access_token_o
 	if (!email) {
 		const user_id = auth0__user_id_(auth0__access_token_o)
-		/** @type {import('@ctx-core/auth0').auth0__v2_user__fetch_get__params_T} */
+		/** @type {import('@ctx-core/auth0').auth0__v2_user__GET__fetch2__params_T} */
 		const get_auth0_v2_user_params = {
 			AUTH0_DOMAIN: AUTH0_DOMAIN_(ctx),
 			user_id
 		}
-		const [user] = await auth0__v2_user__fetch_get(ctx, get_auth0_v2_user_params)
+		const [user] = await auth0__v2_user__GET__fetch2(ctx, get_auth0_v2_user_params)
 		auth0__user__validate(user)
 		email = user.email
 	}

@@ -1,9 +1,9 @@
 /// <reference lib="dom" />
 import { auth0__unauthorized__error_, auth0__user_id_ } from '@ctx-core/auth0'
 import {
-	auth0__v2_user__fetch_get,
-	auth0__v2_user__fetch_patch,
-	auth0__v2_users_by_email__fetch_get,
+	auth0__v2_user__GET__fetch2,
+	auth0__v2_user__PATCH__fetch2,
+	auth0__v2_users_by_email__GET__fetch2,
 } from '@ctx-core/auth0-management'
 import { Headers } from '@ctx-core/fetch-undici'
 import { authorization__header__jwt_token_ } from '@ctx-core/jwt'
@@ -45,10 +45,10 @@ export async function auth0__change_password__POST(
 	const json = JSON.parse(text)
 	const { password } = json
 	const [user, response] =
-		await auth0__v2_user__fetch_patch(ctx, user_id, { password })
+		await auth0__v2_user__PATCH__fetch2(ctx, user_id, { password })
 	if (!response.ok) {
 		if (user.error) {
-			console.trace(`auth0__v2_user__fetch_patch error response: ${response.status}:\n${user}`)
+			console.trace(`auth0__v2_user__PATCH__fetch2 error response: ${response.status}:\n${user}`)
 			return unauthorized_response_()
 		}
 	}
@@ -64,14 +64,14 @@ export async function auth0__change_password__POST(
 		const user_id = auth0__user_id_(access_token_o)
 		if (!user_id) return
 		const [request_user] =
-			await auth0__v2_user__fetch_get(ctx, { AUTH0_DOMAIN, user_id })
+			await auth0__v2_user__GET__fetch2(ctx, { AUTH0_DOMAIN, user_id })
 		const { email } = request_user
 		if (!email) return
 		if (is_username_password_authentication(request_user)) {
 			return request_user
 		}
 		const [auth0_user_profile_a] =
-			await auth0__v2_users_by_email__fetch_get(ctx, { AUTH0_DOMAIN, email })
+			await auth0__v2_users_by_email__GET__fetch2(ctx, { AUTH0_DOMAIN, email })
 		for (const auth0_user_profile of auth0_user_profile_a) {
 			if (is_username_password_authentication(auth0_user_profile)) return auth0_user_profile
 		}
