@@ -8,7 +8,7 @@ import {
 import { Headers } from '@ctx-core/fetch-undici'
 import { authorization__header__jwt_token_ } from '@ctx-core/jwt'
 import { log } from '@ctx-core/logger'
-import { auth0__access_token_o_ } from '../auth0__access_token_o_/index.js'
+import { auth0__access_token_o__new } from '../auth0__access_token_o__new/index.js'
 /** @typedef {import('auth0').User}User */
 /** @typedef {import('@ctx-core/object').Ctx}Ctx */
 const logPrefix = '@ctx-core/auth0-service > auth0__change_password__POST'
@@ -60,7 +60,7 @@ export async function auth0__change_password__POST(
 	 * @private
 	 */
 	async function password_user_() {
-		const access_token_o = await auth0__access_token_o_(ctx, access_token)
+		const access_token_o = await auth0__access_token_o__new(ctx, access_token)
 		const user_id = auth0__user_id_(access_token_o)
 		if (!user_id) return
 		const [request_user] =

@@ -1,5 +1,11 @@
 # @ctx-core/auth0-service
 
+## 4.4.0
+
+### Minor Changes
+
+- - auth0**access_token_o**new: aliased by auth0\__access_token_o_
+
 ## 4.3.0
 
 ### Minor Changes
