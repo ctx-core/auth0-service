@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken'
-import { auth0__jwks_cert_ } from '../auth0__jwks_cert_/index.js'
+import { auth0__jwks_cert__new } from '../auth0__jwks_cert__new/index.js'
 /**
  * @param {import('@ctx-core/object').Ctx}ctx
  * @param {string}access_token
@@ -10,7 +10,7 @@ export async function auth0__access_token_o_(
 	ctx,
 	access_token
 ) {
-	const jwks_cert = await auth0__jwks_cert_(ctx)
+	const jwks_cert = await auth0__jwks_cert__new(ctx)
 	return jwt.verify(access_token, jwks_cert)
 }
 export {

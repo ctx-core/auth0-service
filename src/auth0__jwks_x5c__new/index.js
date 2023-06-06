@@ -5,7 +5,7 @@ import { fetch_response__throw } from '@ctx-core/fetch-undici'
  * @return {Promise<string>}
  * @private
  */
-export async function auth0__jwks_x5c_(ctx) {
+export async function auth0__jwks_x5c__new(ctx) {
 	const [
 		jwks_json,
 		response
@@ -16,5 +16,5 @@ export async function auth0__jwks_x5c_(ctx) {
 	return jwks_json.keys[0].x5c
 }
 export {
-	auth0__jwks_x5c_ as jwks_x5c_,
+	auth0__jwks_x5c__new as jwks_x5c_,
 }

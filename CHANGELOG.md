@@ -1,5 +1,12 @@
 # @ctx-core/auth0-service
 
+## 4.3.0
+
+### Minor Changes
+
+- - auth0**jwks_cert**new: aliased by auth0\__jwks_cert_
+- - auth0**jwks_x5c**new: aliased by auth0\__jwks_x5c_
+
 ## 4.2.247
 
 ### Patch Changes
