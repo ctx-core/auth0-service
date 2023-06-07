@@ -1,5 +1,14 @@
 # @ctx-core/auth0-service
 
+## 4.4.1
+
+### Patch Changes
+
+- auth0**access_token_o**new: fix: require('jsonwebtoken'): ∋ createRequire
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/auth0@38.4.0
+
 ## 4.4.0
 
 ### Minor Changes
