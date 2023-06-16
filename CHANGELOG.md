@@ -1,5 +1,11 @@
 # @ctx-core/auth0-service
 
+## 4.4.21
+
+### Patch Changes
+
+- @ctx-core/auth0-management: ^9.7.7 -> ^9.7.8
+
 ## 4.4.20
 
 ### Patch Changes
