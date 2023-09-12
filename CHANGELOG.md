@@ -1,5 +1,13 @@
 # @ctx-core/auth0-service
 
+## 4.4.97
+
+### Patch Changes
+
+- @types/trouter: ^3.1.1 -> ^3.1.2
+- Updated dependencies
+  - @ctx-core/auth0-management@9.7.82
+
 ## 4.4.96
 
 ### Patch Changes
