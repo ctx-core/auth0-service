@@ -1,5 +1,32 @@
 # @ctx-core/auth0-service
 
+## 4.4.150
+
+### Patch Changes
+
+- @types/auth0: ^3.3.6 -> ^3.3.8
+- @types/auth0-js: ^9.21.1 -> ^9.21.2
+- @types/trouter: ^3.1.2 -> ^3.1.3
+- tsx: ^3.13.0 -> ^3.14.0
+- @types/jsonwebtoken: ^9.0.3 -> ^9.0.4
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/auth0@40.0.60
+  - @ctx-core/auth0-management@9.7.127
+  - @ctx-core/fetch-undici@3.0.30
+  - @ctx-core/error@12.3.45
+  - @ctx-core/function@21.20.2
+  - @ctx-core/jwt@10.4.98
+  - @ctx-core/logger@9.1.21
+  - @ctx-core/object@28.2.1
+
 ## 4.4.149
 
 ### Patch Changes
