@@ -1,5 +1,19 @@
 # @ctx-core/auth0-service
 
+## 4.4.183
+
+### Patch Changes
+
+- @types/auth0-js: ^9.21.3 -> ^9.21.4
+- @types/jsonwebtoken: ^9.0.4 -> ^9.0.5
+- @types/trouter: ^3.1.3 -> ^3.1.4
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/auth0@40.0.88
+  - @ctx-core/auth0-management@9.7.159
+
 ## 4.4.182
 
 ### Patch Changes
