@@ -1,6 +1,6 @@
 {
 	"name": "@ctx-core/auth0-service",
-	"version": "4.4.191",
+	"version": "4.5.0",
 	"description": "ctx-core auth0 ui component & express endpoints",
 	"keywords": [
 		"ctx-core",
@@ -17,11 +17,20 @@
 	"license": "Apache-2.0",
 	"author": "Brian Takita",
 	"type": "module",
-	"types": "./src/index.d.ts",
-	"svelte": "./src/index.js",
+	"files": [
+		"*.d.ts",
+		"./auth0__access_token_o__new",
+		"./auth0__change_password__POST",
+		"./auth0__header__authorization__access_token_o__validate",
+		"./auth0__header__authorization__email__validate",
+		"./auth0__header__authorization__user_id__validate",
+		"./auth0__jwks_cert__new",
+		"./auth0__jwks_x5c__new"
+	],
+	"types": "./index.d.ts",
 	"exports": {
 		".": {
-			"default": "./src/index.js"
+			"default": "./index.js"
 		},
 		"./package.json": "./package.json"
 	},
@@ -35,14 +44,14 @@
 		"test-unit-coverage": "c8 pnpm test-unit"
 	},
 	"dependencies": {
-		"@ctx-core/auth0": "^40.0.96",
-		"@ctx-core/auth0-management": "^9.7.167",
-		"@ctx-core/error": "^12.3.49",
-		"@ctx-core/fetch-undici": "^3.0.52",
-		"@ctx-core/function": "^21.20.2",
-		"@ctx-core/jwt": "^10.4.110",
-		"@ctx-core/logger": "^9.1.21",
-		"@ctx-core/object": "^30.0.0",
+		"@ctx-core/auth0": "^40.1.0",
+		"@ctx-core/auth0-management": "^9.8.0",
+		"@ctx-core/error": "^12.4.0",
+		"@ctx-core/fetch-undici": "^3.1.0",
+		"@ctx-core/function": "^21.21.0",
+		"@ctx-core/jwt": "^10.5.0",
+		"@ctx-core/logger": "^9.2.0",
+		"@ctx-core/object": "^30.1.0",
 		"jsonwebtoken": "^9.0.2"
 	},
 	"devDependencies": {

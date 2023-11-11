@@ -1,36 +1,12 @@
 {
 	"compileOnSave": true,
 	"compilerOptions": {
-		"allowSyntheticDefaultImports": true,
-		"composite": true,
-		"declaration": true,
-		"declarationDir": "lib",
-		"esModuleInterop": true,
-		"lib": ["dom", "ESNext"],
-		"mapRoot": "",
 		"module": "ESNext",
-		"moduleResolution": "node",
-		"noEmitOnError": true,
-		"noErrorTruncation": true,
-		"noImplicitAny": true,
-		"noImplicitThis": true,
-		"noUnusedLocals": true,
-		"noUnusedParameters": true,
-		"outDir": "lib",
-		"resolveJsonModule": true,
-		"rootDir": ".",
-		"sourceMap": true,
-		"strict": true,
-		"strictFunctionTypes": true,
-		"target": "ES2022",
-		"typeRoots": [
-			"../../../node_modules/@types",
-			"../../node_modules/@types",
-			"node_modules/@types"
-		]
+		"moduleResolution": "nodenext",
+		"target": "ESNext",
+		"strict": true
 	},
 	"exclude": [
-		"lib",
 		"node_modules"
 	],
 	"references": []
