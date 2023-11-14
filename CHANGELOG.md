@@ -1,5 +1,20 @@
 # @ctx-core/auth0-service
 
+## 4.5.2
+
+### Patch Changes
+
+- fix: missing tsconfig.json
+- Updated dependencies
+  - @ctx-core/auth0@40.1.2
+  - @ctx-core/auth0-management@9.8.3
+  - @ctx-core/error@12.4.2
+  - @ctx-core/fetch-undici@3.1.2
+  - @ctx-core/function@21.21.2
+  - @ctx-core/jwt@10.5.2
+  - @ctx-core/logger@9.2.2
+  - @ctx-core/object@30.1.2
+
 ## 4.5.1
 
 ### Patch Changes
