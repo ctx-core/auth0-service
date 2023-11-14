@@ -1,5 +1,20 @@
 # @ctx-core/auth0-service
 
+## 4.5.3
+
+### Patch Changes
+
+- package.json: files: + \*.js
+- Updated dependencies
+  - @ctx-core/auth0@40.1.3
+  - @ctx-core/auth0-management@9.8.4
+  - @ctx-core/error@12.4.3
+  - @ctx-core/fetch-undici@3.1.3
+  - @ctx-core/function@21.21.3
+  - @ctx-core/jwt@10.5.3
+  - @ctx-core/logger@9.2.3
+  - @ctx-core/object@30.1.3
+
 ## 4.5.2
 
 ### Patch Changes
