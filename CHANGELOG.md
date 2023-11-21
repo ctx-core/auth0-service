@@ -1,5 +1,21 @@
 # @ctx-core/auth0-service
 
+## 4.5.51
+
+### Patch Changes
+
+- tsx: ^4.1.4 -> ^4.2.0
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/error@12.4.21
+  - @ctx-core/function@21.22.17
+  - @ctx-core/object@31.1.3
+  - @ctx-core/auth0@40.1.40
+  - @ctx-core/auth0-management@9.8.42
+  - @ctx-core/fetch-undici@3.1.37
+  - @ctx-core/jwt@10.5.22
+  - @ctx-core/logger@9.2.6
+
 ## 4.5.50
 
 ### Patch Changes
