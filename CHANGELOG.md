@@ -1,5 +1,18 @@
 # @ctx-core/auth0-service
 
+## 4.5.55
+
+### Patch Changes
+
+- @types/auth0-js: ^9.21.4 -> ^9.21.5
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/error@12.4.23
+  - @ctx-core/function@21.22.19
+  - @ctx-core/object@31.1.5
+  - @ctx-core/auth0@40.1.43
+  - @ctx-core/auth0-management@9.8.45
+
 ## 4.5.54
 
 ### Patch Changes
