@@ -1,9 +1,10 @@
+/// <reference types="ctx-core" />
 import { auth0__user_id_ } from '@ctx-core/auth0'
 import {
 	auth0__header__authorization__access_token_o__validate
 } from '../auth0__header__authorization__access_token_o__validate/index.js'
 /**
- * @param {import('@ctx-core/object').Ctx}ctx
+ * @param {Ctx}ctx
  * @param {string}authorization
  * @returns {Promise<string>}
  * @private

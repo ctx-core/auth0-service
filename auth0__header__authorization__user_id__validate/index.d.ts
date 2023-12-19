@@ -1,4 +1,4 @@
-import type { Ctx } from '@ctx-core/object'
+import type { Ctx } from 'ctx-core/be'
 export declare function auth0__header__authorization__user_id__validate(
 	ctx:Ctx,
 	authorization:string

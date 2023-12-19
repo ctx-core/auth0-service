@@ -1,6 +1,7 @@
+/// <reference types="ctx-core" />
 import { auth0__jwks_x5c__new } from '../auth0__jwks_x5c__new/index.js'
 /**
- * @param {import('@ctx-core/object').Ctx}ctx
+ * @param {Ctx}ctx
  * @return {Promise<string>}
  * @private
  */

@@ -1,4 +1,5 @@
 /// <reference lib="dom" />
+/// <reference types="ctx-core" />
 import { auth0__unauthorized__error_, auth0__user_id_ } from '@ctx-core/auth0'
 import {
 	auth0__v2_user__GET__fetch2,
@@ -10,7 +11,7 @@ import { authorization__header__jwt_token_ } from '@ctx-core/jwt'
 import { log } from '@ctx-core/logger'
 import { auth0__access_token_o__new } from '../auth0__access_token_o__new/index.js'
 /** @typedef {import('auth0').User} */
-/** @typedef {import('@ctx-core/object').Ctx} */
+/** @typedef {Ctx} */
 const logPrefix = '@ctx-core/auth0-service > auth0__change_password__POST'
 /**
  * @param {Ctx}ctx

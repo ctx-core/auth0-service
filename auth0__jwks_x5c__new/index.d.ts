@@ -1,4 +1,4 @@
-import type { Ctx } from '@ctx-core/object'
+import type { Ctx } from 'ctx-core/be'
 export declare function auth0__jwks_x5c__new(
 	ctx:Ctx
 ):Promise<string>

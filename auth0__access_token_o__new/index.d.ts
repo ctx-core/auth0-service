@@ -1,5 +1,5 @@
 import type { auth0__access_token_o_T } from '@ctx-core/auth0'
-import type { Ctx } from '@ctx-core/object'
+import type { Ctx } from 'ctx-core/be'
 export declare function auth0__access_token_o__new(
 	ctx:Ctx,
 	jwt_token:string

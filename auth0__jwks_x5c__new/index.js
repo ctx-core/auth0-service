@@ -1,7 +1,8 @@
+/// <reference types="ctx-core" />
 import { jwks__json__GET__fetch2 } from '@ctx-core/auth0'
 import { fetch_response__throw } from '@ctx-core/fetch-undici'
 /**
- * @param {import('@ctx-core/object').Ctx}ctx
+ * @param {Ctx}ctx
  * @return {Promise<string>}
  * @private
  */
