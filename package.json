@@ -60,7 +60,7 @@
 		"@types/auth0-js": "^9.21.5",
 		"@types/jsonwebtoken": "^9.0.5",
 		"@types/trouter": "^3.1.4",
-		"c8": "^9.0.0",
+		"c8": "^9.1.0",
 		"check-dts": "^0.7.2",
 		"tsx": "^4.7.0",
 		"typescript": "next",
