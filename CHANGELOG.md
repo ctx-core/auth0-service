@@ -1,5 +1,16 @@
 # @ctx-core/auth0-service
 
+## 4.5.230
+
+### Patch Changes
+
+- ctx-core: ^5.27.1 -> ^5.27.2
+- Updated dependencies
+  - @ctx-core/auth0@40.1.181
+  - @ctx-core/auth0-management@10.0.53
+  - @ctx-core/fetch-undici@3.1.169
+  - @ctx-core/jwt@10.5.108
+
 ## 4.5.229
 
 ### Patch Changes
