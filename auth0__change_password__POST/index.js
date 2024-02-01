@@ -6,9 +6,9 @@ import {
 	auth0__v2_user__PATCH__fetch2,
 	auth0__v2_users_by_email__GET__fetch2,
 } from '@ctx-core/auth0-management'
-import { Headers } from '@ctx-core/fetch-undici'
 import { authorization__header__jwt_token_ } from '@ctx-core/jwt'
 import { log } from '@ctx-core/logger'
+import { Headers } from 'ctx-core/fetch'
 import { auth0__access_token_o__new } from '../auth0__access_token_o__new/index.js'
 /** @typedef {import('auth0').User} */
 /** @typedef {Ctx} */
