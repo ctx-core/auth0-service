@@ -1,11 +1,12 @@
+/// <reference types="@ctx-core/auth0" />
 /// <reference types="ctx-core" />
 import { bad_credentials__throw } from 'ctx-core/error'
 import { authorization__header__jwt_token_ } from '@ctx-core/jwt'
 import { auth0__access_token_o__new } from '../auth0__access_token_o__new/index.js'
 /**
- * @param {Ctx}ctx
+ * @param {ctx_T}ctx
  * @param {string|undefined}authorization
- * @return {Promise<import('@ctx-core/auth0').auth0__access_token_o_T>}
+ * @return {Promise<auth0__access_token_o_T>}
  * @private
  */
 export async function auth0__header__authorization__access_token_o__validate(

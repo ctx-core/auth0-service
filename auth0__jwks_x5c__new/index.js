@@ -2,7 +2,7 @@
 import { jwks__json__GET__fetch2 } from '@ctx-core/auth0'
 import { fetch_response__throw } from 'ctx-core/fetch'
 /**
- * @param {Ctx}ctx
+ * @param {ctx_T}ctx
  * @return {Promise<string>}
  * @private
  */

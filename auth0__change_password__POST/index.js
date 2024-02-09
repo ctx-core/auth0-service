@@ -11,10 +11,10 @@ import { log } from '@ctx-core/logger'
 import { Headers } from 'ctx-core/fetch'
 import { auth0__access_token_o__new } from '../auth0__access_token_o__new/index.js'
 /** @typedef {import('auth0').User} */
-/** @typedef {Ctx} */
+/** @typedef {ctx_T} */
 const logPrefix = '@ctx-core/auth0-service > auth0__change_password__POST'
 /**
- * @param {Ctx}ctx
+ * @param {ctx_T}ctx
  * @param {Request}request
  * @returns {Promise<Response>}
  */

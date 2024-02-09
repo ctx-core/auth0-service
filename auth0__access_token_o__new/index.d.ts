@@ -1,7 +1,7 @@
 import type { auth0__access_token_o_T } from '@ctx-core/auth0'
-import type { Ctx } from 'ctx-core/be'
+import type { ctx_T } from 'ctx-core/be'
 export declare function auth0__access_token_o__new(
-	ctx:Ctx,
+	ctx:ctx_T,
 	jwt_token:string
 ):Promise<auth0__access_token_o_T>
 export {

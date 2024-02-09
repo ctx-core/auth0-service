@@ -1,7 +1,7 @@
 /// <reference types="ctx-core" />
 import { auth0__jwks_x5c__new } from '../auth0__jwks_x5c__new/index.js'
 /**
- * @param {Ctx}ctx
+ * @param {ctx_T}ctx
  * @return {Promise<string>}
  * @private
  */

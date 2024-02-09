@@ -1,6 +1,6 @@
-import type { Ctx } from 'ctx-core/be'
+import type { ctx_T } from 'ctx-core/be'
 export declare function auth0__change_password__POST(
-	ctx:Ctx,
+	ctx:ctx_T,
 	req:Request
 ):Promise<Response>
 export {

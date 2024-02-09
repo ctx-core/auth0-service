@@ -4,7 +4,7 @@ import {
 	auth0__header__authorization__access_token_o__validate
 } from '../auth0__header__authorization__access_token_o__validate/index.js'
 /**
- * @param {Ctx}ctx
+ * @param {ctx_T}ctx
  * @param {string}authorization
  * @returns {Promise<string>}
  * @private

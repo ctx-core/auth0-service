@@ -3,7 +3,7 @@ import { createRequire } from 'module'
 import { auth0__jwks_cert__new } from '../auth0__jwks_cert__new/index.js'
 const require = createRequire(import.meta.url)
 /**
- * @param {Ctx}ctx
+ * @param {ctx_T}ctx
  * @param {string}access_token
  * @return {Promise<import('@ctx-core/auth0').auth0__access_token_o_T|string>}
  * @private
