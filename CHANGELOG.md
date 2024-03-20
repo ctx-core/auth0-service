@@ -1,5 +1,17 @@
 # @ctx-core/auth0-service
 
+## 4.5.290
+
+### Patch Changes
+
+- package.json: author: url,email
+- Updated dependencies
+  - @ctx-core/auth0@40.1.237
+  - @ctx-core/auth0-management@10.0.112
+  - ctx-core@6.6.1
+  - @ctx-core/jwt@10.5.157
+  - @ctx-core/logger@9.2.11
+
 ## 4.5.289
 
 ### Patch Changes
