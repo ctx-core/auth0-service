@@ -51,21 +51,21 @@
 		"disable:test:unit:coverage": "c8 pnpm test:unit"
 	},
 	"dependencies": {
-		"@ctx-core/auth0": "^40.1.296",
-		"@ctx-core/auth0-management": "^10.0.176",
-		"@ctx-core/jwt": "^10.5.206",
+		"@ctx-core/auth0": "*",
+		"@ctx-core/auth0-management": "*",
+		"@ctx-core/jwt": "*",
 		"@ctx-core/logger": "^9.2.11",
-		"ctx-core": "^7.2.32",
+		"ctx-core": "*",
 		"jsonwebtoken": "^9.0.2"
 	},
 	"devDependencies": {
-		"@types/auth0": "^3.3.10",
+		"@types/auth0": "^3.3.11",
 		"@types/auth0-js": "^9.21.6",
-		"@types/jsonwebtoken": "^9.0.6",
+		"@types/jsonwebtoken": "^9.0.10",
 		"@types/trouter": "^3.1.4",
-		"c8": "^10.1.2",
+		"c8": "^10.1.3",
 		"check-dts": "^0.8.2",
-		"tsx": "^4.19.0",
+		"tsx": "^4.20.6",
 		"typescript": "next",
 		"uvu": "^0.5.6"
 	},
