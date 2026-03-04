@@ -1,5 +1,38 @@
 # @ctx-core/auth0-service
 
+## 4.5.355
+
+### Patch Changes
+
+- c8: ^10.1.3 -> ^11.0.0
+- check-dts: ^0.8.2 -> ^0.9.0
+- tsx: ^4.20.6 -> ^4.21.0
+- jsonwebtoken: ^9.0.2 -> ^9.0.3
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+- Updated dependencies
+  - @ctx-core/auth0@40.1.297
+  - @ctx-core/auth0-management@10.0.177
+  - ctx-core@7.2.33
+  - @ctx-core/jwt@10.5.207
+  - @ctx-core/logger@9.2.12
+
 ## 4.5.354
 
 ### Patch Changes
