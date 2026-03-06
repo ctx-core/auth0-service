@@ -1,5 +1,17 @@
 # @ctx-core/auth0-service
 
+## 4.5.356
+
+### Patch Changes
+
+- chore: migrate scripts from pnpm to bun
+- Updated dependencies
+  - @ctx-core/auth0@40.1.298
+  - @ctx-core/auth0-management@10.0.178
+  - ctx-core@7.2.34
+  - @ctx-core/jwt@10.5.208
+  - @ctx-core/logger@9.2.13
+
 ## 4.5.355
 
 ### Patch Changes
